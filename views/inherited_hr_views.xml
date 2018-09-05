@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--hr.employee-->
+        <record id="open_view_employee_list_my" model="ir.actions.act_window">
+            <field name="name">Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" eval="False"/>
+            <!--<field name="search_view_id" ref="view_employee_filter"/>-->
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a new employee.
+              </p><p>
+                With just a quick glance on the Odoo employee screen, you
+                can easily find all the information you need for each person;
+                contact data, job position, availability, etc.
+              </p>
+            </field>
+        </record>
+
+        <record id="view_employee_form_inherit_gesion_dms" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <!--<field name="priority">10</field>-->
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="description" />
+                </field>
+                <field name="user_id" position="after">
+                    <field string="Organizations" name="organization_ids" widget="many2many_tags"/>
+                    <field string="Project Tasks" name="project_task_ids" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+
+        <!--员工管理-->
+        <menuitem id="menu_hr_employee" action="open_view_employee_list_my" parent="menu_organization_management"
+                  name="Employee Management"/>
+
+        <record id="view_department_form" model="ir.ui.view">
+            <field name="name">hr.department.form</field>
+            <field name="model">hr.department</field>
+            <field name="arch" type="xml">
+                <form string="department">
+                   <xpath expr="//sheet/group" position="inside">
+                        <group>
+                            <field name="organization_id" />
+                        </group>
+                    </xpath>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_department_tree" model="ir.ui.view">
+            <field name="name">hr.department.tree</field>
+            <field name="model">hr.department</field>
+            <field name="field_parent">child_ids</field>
+            <field name="arch" type="xml">
+                <tree string="Companies">
+                    <field name="display_name"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="manager_id"/>
+                    <field name="parent_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--部门列表-->
+        <record id="open_module_tree_department" model="ir.actions.act_window">
+            <field name="name">Department List</field>
+            <field name="res_model">hr.department</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a department.
+              </p><p>
+                Odoo's department structure is used to manage all documents
+                related to employees by departments: expenses, timesheets,
+                leaves and holidays, recruitments, etc.
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+            action="open_module_tree_department"
+            id="menu_hr_department"
+            parent="menu_organization_management"
+            sequence="5"/>
+
+
+
+        <!--公司列表-->
+        <record id="open_module_tree_company" model="ir.actions.act_window">
+            <field name="name">Company List</field>
+            <field name="res_model">res.company</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a department.
+              </p><p>
+                Odoo's company structure is used to manage all documents
+                related to employees by departments: expenses, timesheets,
+                leaves and holidays, recruitments, etc.
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+            action="open_module_tree_company"
+            id="menu_res_company"
+            parent="menu_organization_management"
+            sequence="4"/>
+
+        <!--项目列表-->
+        <record id="open_module_tree_project" model="ir.actions.act_window">
+            <field name="name">Project List</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a department.
+              </p><p>
+                Odoo's project structure is used to manage all documents
+                related to employees by departments: expenses, timesheets,
+                leaves and holidays, recruitments, etc.
+              </p>
+            </field>
+        </record>
+
+
+           <record id="view_dms_project_project_form_inherited" model="ir.ui.view">
+            <field name="name">project.project.form.inherited</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <!--<field name="priority">10</field>-->
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="before">
+                    <group string="Project Information">
+                        <group>
+                            <field name="organization_id" readonly="True" required='False'/>
+                            <field name="project_code" />
+                            <field name="design_manager"/>
+                        </group>
+                        <group>
+                            <field name="project_manager"/>
+                            <field name="craft_package"/>
+                            <field name="proprietor"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//page[@name='emails']" position="after">
+                    <page string="Document Control Staff">
+                        <field name="document_control_users"/>
+                    </page>
+                    <field name="document_control_users"/>
+                </xpath>
+            </field>
+            </record>
+
+
+            <record id="view_dms_project_project_tree_inherited" model="ir.ui.view">
+            <field name="name">project.project.tree.inherited</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project"/>
+            <!--<field name="priority">10</field>-->
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="project_code"/>
+                    <field name="proprietor"/>
+                </field>
+            </field>
+            </record>
+
+
+        <menuitem
+            action="open_module_tree_project"
+            id="menu_res_project"
+            parent="menu_organization_management"
+            sequence="3"/>
+
+        <!--组织机构管理-->
+        <record id="open_module_tree_organization" model="ir.actions.act_window">
+            <field name="name">Organization Management</field>
+            <field name="res_model">gesion.organization</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a department.
+              </p><p>
+                Odoo's organization structure is used to manage all documents
+                related to employees by departments: expenses, timesheets,
+                leaves and holidays, recruitments, etc.
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+            action="open_module_tree_organization"
+            id="menu_res_organization"
+            parent="menu_organization_management"
+            sequence="2"/>
+    </data>
+</odoo>
+  

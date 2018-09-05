@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+	<record id="action_gesion_repository" model="ir.actions.client">
+		<field name="name">RepositoryTreeView</field>
+		<field name="tag">gesion_dms_views.repository</field>
+	</record>
+	<!--文件树状图-->
+	<menuitem id="menu_dms_tree_view" name="Document Tree View" parent="menu_document_management"
+			  action="action_gesion_repository" sequence="1"/>
+
+
+    </data>
+</odoo>
+  

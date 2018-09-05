@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="view_dms_directory_tree_inherited" model="ir.ui.view">
+			<field name="name">muk_dms_directory.tree.inherited</field>
+			<field name="model">muk_dms.directory</field>
+			<field name="inherit_id" ref="muk_dms.view_dms_directory_tree"/>
+			<field name="arch" type="xml">
+                <xpath expr="//field[@name='settings']" position="after">
+                    <field name="seq" />
+					<field name="repository_id"/>
+					<field name="directory_code" string="Folder Code"/>
+                </xpath>
+			</field>
+		</record>
+
+		<record id="muk_dms.view_dms_directory_form_inherited" model="ir.ui.view">
+			<field name="name">muk_dms_directory.form.inherited</field>
+			<field name="model">muk_dms.directory</field>
+			<field name="inherit_id" ref="muk_dms.view_dms_directory_form"/>
+			<field name="arch" type="xml">
+                <xpath expr="//form[1]" position="replace">
+                    <form string="Directory">
+                        <sheet>
+                            <field name="thumbnail"
+                                widget="image"
+                                class="oe_avatar oe_read_only"
+                                options="{'size': [90, 90]}"/>
+                            <field name="custom_thumbnail"
+                                widget="image"
+                                class="oe_avatar oe_edit_only"
+                                options="{'size': [90, 90]}"/>
+                            <div class="oe_title">
+                                <label for="name" class="oe_edit_only" />
+                                <h1>
+                                    <field name="name" string="Folder Name"/>
+                                </h1>
+                            </div>
+                            <group>
+                                <field name="relational_path" widget="dms_relpath" />
+                                <field name="description" string="Folder Description"/>
+                                <field name="tag_ids" widget="many2many_tags"/>
+                                <field name="directory_code" string="Folder Code"/>
+                                <field name="seq" />
+                                <field name="has_child" invisible="1"/>
+                                <!--<field name="direction" invisible="1"/>-->
+                            </group>
+                                <group>
+                                    <group string="Folder Settings:">
+                                    <group>
+                                        <field name="repository_id" string="Repository"/>
+                                        <field name="is_root_directory" string="Root Directory"/>
+                                    <!--</group>-->
+                                    <!--<group>-->
+                                        <field name="settings" string="Storage Database"
+                                            attrs="{'readonly':[('is_root_directory','=',False)],
+                                                    'required':[('is_root_directory','=',True)]}"/>
+                                        <field name="parent_directory"
+                                            attrs="{'invisible':[('is_root_directory','=',True)],
+                                                    'required':[('is_root_directory','=',False)]}"/>
+                                    </group>
+                                </group>
+                                <group string="Folder Statistics Information:">
+                                    <group>
+                                        <field name="count_files" string="Current Documents"/>
+                                        <field name="hierarchy" readonly="True"/>
+                                        <!--hierarchy must have invisible = True,otherwise hierarchy can't be stored in database-->
+                                        <!--<field name="hierarchy" invisible="True"/>-->
+                                        <field name="doc_count" readonly="True" string="Total Document Count"/>
+                                    </group>
+                                    <group>
+                                        <field name="count_directories" string="Current Folders"/>
+                                        <field name="size" widget="dms_size" />
+                                    </group>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Folder Progress:">
+                                    <!--<field name="progress"/>-->
+                                    <!--<field name="input_progress" class="oe_inline" placeholder="Input"/>-->
+                                    <field name="output"/>
+                                    <field name="task_id"/>
+                                    <field name="relativity_weight" string="Relativity Weight（0-1）"/>
+                                    <field name="absolute_weight"/>
+                                    <field name="earned_value" string="Earned Value（0-1）"/>
+                                </group>
+                                <group string="Man-hours:">
+                                    <field name="man_hours"/>
+                                    <field name="labor_cost"/>
+                                    <field name="labor_cost_unit"/>
+                                </group>
+                            </group>
+
+                            <notebook>
+                                <page string="Files">
+                                    <field name="files">
+                                        <tree string="Files" create="false">
+                                            <field name="name" />
+                                            <field name="size" widget="dms_size" />
+                                            <field name="write_date" readonly="1" />
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page string="Subdirectories">
+                                    <field name="child_directories">
+                                        <tree string="Subdirectories" create="false">
+                                            <field name="name" />
+                                            <field name="size" widget="dms_size" />
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page string="Access Information">
+                                    <group>
+                                        <group>
+                                            <field name="perm_read" readonly="1" />
+                                        </group>
+                                        <group>
+                                            <field name="perm_create" readonly="1" />
+                                            <field name="perm_write" readonly="1" />
+                                            <field name="perm_unlink" readonly="1" />
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Meta Information" groups="base.group_no_one">
+                                    <group>
+                                        <field name="id" />
+                                    </group>
+                                    <group>
+                                        <group>
+                                            <field name="create_date" readonly="1" />
+                                            <field name="create_uid" readonly="1" />
+                                        </group>
+                                        <group>
+                                            <field name="write_date" readonly="1" />
+                                            <field name="write_uid" readonly="1" />
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Folder Administrator">
+                                    <!--<field name="folder_administrator_ids" />-->
+                                </page>
+                            </notebook>
+                        </sheet>
+                    </form>
+                </xpath>
+			</field>
+		</record>
+
+		<!--<record id="view_dms_directory_form_inherited" model="ir.ui.view">-->
+			<!--<field name="name">muk_dms_directory.form</field>-->
+			<!--<field name="model">muk_dms.directory</field>-->
+			<!--<field name="inherit_id" ref="muk_dms.view_dms_directory_form"/>-->
+			<!--<field name="arch" type="xml">-->
+				<!--<xpath expr="//sheet/group[last()-1]" position="inside">-->
+					<!--<group>-->
+						<!--<field name="hierarchy" readonly="True"/>-->
+                        <!--&lt;!&ndash;hierarchy must have invisible = True,otherwise hierarchy can't be stored in database&ndash;&gt;-->
+                        <!--<field name="hierarchy" invisible="True"/>-->
+						<!--<field name="doc_count" readonly="True"/>-->
+						<!--<field name="directory_code"/>-->
+						<!--<field name="man_hours"/>-->
+						<!--<field name="labor_cost"/>-->
+						<!--<field name="labor_cost_unit"/>-->
+						<!--<field name="description"/>-->
+                        <!--<field name="tag_ids" widget="many2many_tags"/>-->
+					<!--</group>-->
+				<!--</xpath>-->
+				<!--<xpath expr="//sheet/group[last()]" position="inside">-->
+					<!--<group>-->
+						<!--<field name="repository_id"/>-->
+						<!--&lt;!&ndash;<field name="progress"/>&ndash;&gt;-->
+						<!--<field name="relativity_weight" string="Relativity Weight（0-1）"/>-->
+						<!--<field name="absolute_weight"/>-->
+						<!--<field name="earned_value" string="赢得值（0-1）"/>-->
+					<!--</group>-->
+				<!--</xpath>-->
+			<!--</field>-->
+		<!--</record>-->
+
+		<record id="action_gesion_directory" model="ir.actions.act_window">
+			<field name="name">Document Directories</field>
+			<field name="res_model">muk_dms.directory</field>
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+        <!--文件夹管理-->
+        <menuitem name="Folder Management" id="menu_gesion_directory" parent="menu_document_management"
+				  action="action_gesion_directory" sequence="3"/>
+    </data>
+</odoo>
+  

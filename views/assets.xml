@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+<template id="gesion_dms_assets_backend" name="gesion_dms_assets" inherit_id="web.assets_backend">
+    <!--<xpath expr="//link[last()]" position="after">-->
+		<!--<link rel="stylesheet" href="/gesion_dms/static/src/css/gesion_dms.css" />-->
+	<!--</xpath>-->
+    <xpath expr="//link[last()]" position="after">
+		<link rel="stylesheet" href="/gesion_dms/static/src/css/gesion_repository_kanban.less" />
+		<link rel="stylesheet" href="/gesion_dms/static/lib/bootstrap-table/bootstrap-table.css" />
+		<link rel="stylesheet" href="/gesion_dms/static/lib/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.css" />
+		<link rel="stylesheet" href="/gesion_dms/static/src/css/jinjiang_tree.css" />
+	</xpath>
+	<xpath expr="//script[last()]" position="after">
+		<script type="text/javascript" src="/gesion_dms/static/lib/bootstrap-table/bootstrap-table.js" />
+		<script type="text/javascript" src="/gesion_dms/static/lib/bootstrap-table/extensions/editable/bootstrap-table-editable.js" />
+		<script type="text/javascript" src="/gesion_dms/static/lib/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.js" />
+        <script type="text/javascript" src="/gesion_dms/static/src/js/gesion_organization_tree_view.js" />
+        <script type="text/javascript" src="/gesion_dms/static/src/js/gesion_views_documents.js" />
+
+	</xpath>
+</template>
+
+</odoo>

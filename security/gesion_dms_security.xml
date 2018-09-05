@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Portal user and Employee doesn't have access to any planner that is not designed for them-->
+    <!--<record id="web_planner_rule_portal" model="ir.rule">-->
+        <!--<field name="name">Portal Planner</field>-->
+        <!--<field name="model_id" ref="model_web_planner"/>-->
+        <!--<field name="perm_read" eval="1" />-->
+        <!--<field name="domain_force">[(0, '=', 1)]</field>-->
+        <!--<field name="groups" eval="[(4, ref('base.group_public')), (4, ref('base.group_user'))]"/>-->
+    <!--</record>-->
+
+    <!-- DMS Manager, Designer and Reader only have access to repository of own organization -->
+    <record id="repository_rule_organization" model="ir.rule">
+        <field name="name">Repository Limit Organization</field>
+        <field name="model_id" ref="model_gesion_dms_repository"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_dms_manager')), (4, ref('group_gesion_dms_designer')), (4, ref('group_gesion_dms_reader'))]"/>
+    </record>
+
+    <!-- DMS Manager, Designer and Reader only have access to folder of own organization -->
+    <record id="folder_rule_organization" model="ir.rule">
+        <field name="name">Folder Limit Organization</field>
+        <field name="model_id" ref="model_muk_dms_directory"/>
+        <field name="domain_force">[('repository_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_dms_manager')), (4, ref('group_gesion_dms_designer')), (4, ref('group_gesion_dms_reader'))]"/>
+    </record>
+
+    <!-- DMS Manager, Designer and Reader only have access to document of own organization -->
+    <record id="document_rule_organization" model="ir.rule">
+        <field name="name">Document Limit Organization</field>
+        <field name="model_id" ref="model_muk_dms_file"/>
+        <field name="domain_force">[('repository_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_dms_manager')), (4, ref('group_gesion_dms_designer')), (4, ref('group_gesion_dms_reader'))]"/>
+    </record>
+
+    <!-- ERMP HR and Employee only have access to employee of own organization -->
+    <record id="employee_rule_organization" model="ir.rule">
+        <field name="name">Employee Limit Organization</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="domain_force">[('organization_ids' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_ermp_employee')), (4, ref('group_gesion_ermp_hr'))]"/>
+    </record>
+
+    <!-- ERMP HR and Employee only have access to own organization -->
+    <record id="organization_rule_organization" model="ir.rule">
+        <field name="name">Organization Limit Organization</field>
+        <field name="model_id" ref="model_gesion_organization"/>
+        <field name="domain_force">[('id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_ermp_employee')), (4, ref('group_gesion_ermp_hr'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project of own organization -->
+    <record id="project_rule_organization" model="ir.rule">
+        <field name="name">Project Limit Organization</field>
+        <field name="model_id" ref="model_project_project"/>
+        <field name="domain_force">[('organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project stage of own organization -->
+    <record id="project_stage_rule_organization" model="ir.rule">
+        <field name="name">Project Stage Limit Organization</field>
+        <field name="model_id" ref="model_project_stage"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project construction area of own organization -->
+    <record id="project_construction_area_rule_organization" model="ir.rule">
+        <field name="name">Project Constructions Area Limit Organization</field>
+        <field name="model_id" ref="model_project_construction_area"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project discipline of own organization -->
+    <record id="project_discipline_rule_organization" model="ir.rule">
+        <field name="name">Project Discipline Limit Organization</field>
+        <field name="model_id" ref="model_project_discipline"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project address of own organization -->
+    <record id="project_address_rule_organization" model="ir.rule">
+        <field name="name">Project Address Limit Organization</field>
+        <field name="model_id" ref="model_project_address"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project delivery point of own organization -->
+    <record id="project_delivery_point_rule_organization" model="ir.rule">
+        <field name="name">Project Delivery Point Limit Organization</field>
+        <field name="model_id" ref="model_project_delivery_point"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project process area of own organization -->
+    <record id="project_process_area_rule_organization" model="ir.rule">
+        <field name="name">Project Process Area Limit Organization</field>
+        <field name="model_id" ref="model_project_process_area"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project workpackage of own organization -->
+    <record id="project_workpackage_rule_organization" model="ir.rule">
+        <field name="name">Project Workpackage Limit Organization</field>
+        <field name="model_id" ref="model_project_workpackage"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project issuepackage of own organization -->
+    <record id="project_issuepackage_rule_organization" model="ir.rule">
+        <field name="name">Project Issuepackage Limit Organization</field>
+        <field name="model_id" ref="model_project_issuepackage"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project doc class of own organization -->
+    <record id="project_doc_class_rule_organization" model="ir.rule">
+        <field name="name">Project Doc Class Limit Organization</field>
+        <field name="model_id" ref="model_project_doc_class"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project doc type of own organization -->
+    <record id="project_doc_type_rule_organization" model="ir.rule">
+        <field name="name">Project Doc Type Limit Organization</field>
+        <field name="model_id" ref="model_project_doc_type"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to project doc review stage of own organization -->
+    <record id="project_doc_review_stage_rule_organization" model="ir.rule">
+        <field name="name">Project Doc Review Stage Limit Organization</field>
+        <field name="model_id" ref="model_project_doc_review_stage"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to task stage of own organization -->
+    <record id="project_task_stage_rule_organization" model="ir.rule">
+        <field name="name">Project Task Stage Limit Organization</field>
+        <field name="model_id" ref="model_task_stage"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+
+    <!-- Project Manager and User only have access to milestone of own organization -->
+    <record id="project_milestone_rule_organization" model="ir.rule">
+        <field name="name">Project Milestone Limit Organization</field>
+        <field name="model_id" ref="model_milestone"/>
+        <field name="domain_force">[('project_id.organization_id' ,'in', [g.id for g in user.organization_ids])]</field>
+        <field name="groups" eval="[(4, ref('group_gesion_project_user')), (4, ref('group_gesion_project_manager'))]"/>
+    </record>
+</odoo>

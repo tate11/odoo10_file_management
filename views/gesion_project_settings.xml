@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--project.stage-->
+    <record id="project_stage_view_form" model="ir.ui.view">
+            <field name="name">project.stage.form</field>
+            <field name="model">project.stage</field>
+            <field name="arch" type="xml">
+                <form string="Project Stage" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="sequence"/>
+                                <field name="project_stage_code"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                                <field name="std"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_stage_view_list">
+        <field name="name">project.stage.tree</field>
+        <field name="model">project.stage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_stage_code"/>
+                <field name="project_id"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_stage_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Stages</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.stage</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Stage.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.construction.area-->
+    <record id="project_construction_area_view_form" model="ir.ui.view">
+            <field name="name">project.construction.area.form</field>
+            <field name="model">project.construction.area</field>
+            <field name="arch" type="xml">
+                <form string="Project Construction Area" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="sequence"/>
+                                <field name="project_cons_area_code"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <!--<field name="date_start"/>-->
+                                <!--<field name="date_end"/>-->
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_construction_area_view_list">
+        <field name="name">project.construction.area.tree</field>
+        <field name="model">project.construction.area</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_cons_area_code"/>
+                <field name="project_id"/>
+                <!--<field name="date_start"/>-->
+                <!--<field name="date_end"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_construction_area_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Construction Area</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.construction.area</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Construction Area.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.discipline-->
+    <record id="project_discipline_view_form" model="ir.ui.view">
+            <field name="name">project.discipline.form</field>
+            <field name="model">project.discipline</field>
+            <field name="arch" type="xml">
+                <form string="Project Discipline" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_discipline_code"/>
+                                <field name="project_id"/>
+
+                            </group>
+                            <group>
+                                <!--<field name="date_start"/>-->
+                                <!--<field name="date_end"/>-->
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Engineers">
+                                <field name="user_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_discipline_view_list">
+        <field name="name">project.discipline.tree</field>
+        <field name="model">project.discipline</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_discipline_code"/>
+                <field name="project_id"/>
+                <field name="user_ids"/>
+                <!--<field name="date_start"/>-->
+                <!--<field name="date_end"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_discipline_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Discipline</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.discipline</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Discipline.
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+    <!--project.address-->
+    <record id="project_address_view_form" model="ir.ui.view">
+            <field name="name">project.address.form</field>
+            <field name="model">project.address</field>
+            <field name="arch" type="xml">
+                <form string="Project Address" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_address_code"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <!--<field name="date_start"/>-->
+                                <!--<field name="date_end"/>-->
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_address_view_list">
+        <field name="name">project.address.tree</field>
+        <field name="model">project.address</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="project_address_code"/>
+                <field name="project_id"/>
+                <!--<field name="date_start"/>-->
+                <!--<field name="date_end"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_address_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Address</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.address</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Address.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.delivery.point-->
+    <record id="project_delivery_point_view_form" model="ir.ui.view">
+            <field name="name">project.delivery.point.form</field>
+            <field name="model">project.delivery.point</field>
+            <field name="arch" type="xml">
+                <form string="Project Delivery Point" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <field name="project_address_code"/>
+                                <field name="address_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_delivery_point_view_list">
+        <field name="name">project.delivery.point.tree</field>
+        <field name="model">project.delivery.point</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="project_address_code"/>
+                <field name="address_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_delivery_point_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Delivery Point</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.delivery.point</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Delivery Point.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.process.area-->
+    <record id="project_process_area_view_form" model="ir.ui.view">
+            <field name="name">project.process.area.form</field>
+            <field name="model">project.process.area</field>
+            <field name="arch" type="xml">
+                <form string="Project Process Area" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_process_area_view_list">
+        <field name="name">project.process.area.tree</field>
+        <field name="model">project.process.area</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_process_area_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Process Area</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.process.area</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Process Area.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.workpackage-->
+     <record id="project_workpackage_view_form" model="ir.ui.view">
+            <field name="name">project.workpackage.form</field>
+            <field name="model">project.workpackage</field>
+            <field name="arch" type="xml">
+                <form string="Project Workpackage" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                                <field name="contract_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_workpackage_view_list">
+        <field name="name">project.workpackage.tree</field>
+        <field name="model">project.workpackage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="contract_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_workpackage_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Workpackage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.workpackage</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Workpackage.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.doc.class-->
+     <record id="project_doc_class_view_form" model="ir.ui.view">
+            <field name="name">project.doc.class.form</field>
+            <field name="model">project.doc.class</field>
+            <field name="arch" type="xml">
+                <form string="Project Doc Class" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                            <group>
+                                <field name="project_doc_class_code"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_doc_class_view_list">
+        <field name="name">project.doc.class.tree</field>
+        <field name="model">project.doc.class</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="project_doc_class_code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_doc_class_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Doc Class</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.doc.class</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Doc Class.
+            </p><p>
+            </p>
+        </field>
+    </record>
+    <!--project.doc.type-->
+     <record id="project_doc_type_view_form" model="ir.ui.view">
+            <field name="name">project.doc.type.form</field>
+            <field name="model">project.doc.type</field>
+            <field name="arch" type="xml">
+                <form string="Project Doc Type" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                            <group>
+                                <field name="project_doc_type_code"/>
+                                <field name="design_doc_indicate"/>
+                                <field name="special_doc_type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_doc_type_view_list">
+        <field name="name">project.doc.type.tree</field>
+        <field name="model">project.doc.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="project_doc_type_code"/>
+                <field name="design_doc_indicate"/>
+                <field name="special_doc_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_doc_type_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Doc Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.doc.type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Doc Type.
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+    <!--project.doc.review.stage-->
+     <record id="project_doc_review_stage_view_form" model="ir.ui.view">
+            <field name="name">project.doc.review.stage.form</field>
+            <field name="model">project.doc.review.stage</field>
+            <field name="arch" type="xml">
+                <form string="Project Doc Review Stage" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                            <group>
+                                <field name="stage_indicate"/>
+                                <field name="design_doc_indicate"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_doc_review_stage_view_list">
+        <field name="name">project.doc.review.stage.tree</field>
+        <field name="model">project.doc.review.stage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="stage_indicate"/>
+                <field name="design_doc_indicate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_doc_review_stage_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Doc Review Stage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.doc.review.stage</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Doc Review Stage.
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+
+     <record id="project_issuepackage_view_form" model="ir.ui.view">
+            <field name="name">project.issuepackage.form</field>
+            <field name="model">project.issuepackage</field>
+            <field name="arch" type="xml">
+                <form string="Project Issuepackage" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                                <field name="contract_id"/>
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_issuepackage_view_list">
+        <field name="name">project.issuepackage.tree</field>
+        <field name="model">project.issuepackage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="contract_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_issuepackage_view_list_action" model="ir.actions.act_window">
+        <field name="name">Project Issuepackage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.issuepackage</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Project Issuepackage
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+
+     <!--Milestone-->
+    <record id="milestone_view_form" model="ir.ui.view">
+            <field name="name">milestone.form</field>
+            <field name="model">milestone</field>
+            <field name="arch" type="xml">
+                <form string="milestone" class="o_sale_order">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description"/>
+                                <field name="sequence"/>
+                                <field name="project_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="milestone_view_list">
+        <field name="name">milestone.tree</field>
+        <field name="model">milestone</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="project_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="milestone_view_list_action" model="ir.actions.act_window">
+        <field name="name">Milestone</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">milestone</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a milestone.
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+    <!--Milestone-->
+    <record id="task_stage_view_form" model="ir.ui.view">
+            <field name="name">task.stage.form</field>
+            <field name="model">task.stage</field>
+            <field name="arch" type="xml">
+                <form string="task stage" class="o_sale_order">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="stage"/>
+                                <!--<field name="std"/>-->
+                                <!--<field name="remark"/>-->
+                            </group>
+                            <group>
+                                <field name="planned_date"/>
+                                <field name="forcast_date"/>
+                                <field name="actual_date"/>
+                                <field name="milestone"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="task_stage_view_list">
+        <field name="name">task.stage.tree</field>
+        <field name="model">task.stage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="stage"/>
+                <!--<field name="remark"/>-->
+                <field name="actual_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="task_stage_view_list_action" model="ir.actions.act_window">
+        <field name="name">Task Stage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">task.stage</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a task.stage.
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+
+
+    <!--项目管理-->
+    <menuitem id="project_settings" name="Project Settings" parent="menu_document_project_management" sequence="20"/>
+    <!--项目阶段-->
+    <menuitem id="gesion_dms_project_stage" name="Project Stage" parent="project_settings" groups="project.group_project_manager"
+                  action="project_stage_view_list_action" sequence="10"/>
+    <!--项目施工阶段-->
+    <menuitem id="gesion_dms_project_construction_area" name="Project Constructions Area" parent="project_settings" groups="project.group_project_manager"
+                  action="project_construction_area_view_list_action" sequence="20"/>
+    <!--项目专业-->
+    <menuitem id="gesion_dms_project_discipline" name="Project Discipline" parent="project_settings" groups="project.group_project_manager"
+                  action="project_discipline_view_list_action" sequence="30"/>
+    <!--项目地址-->
+    <menuitem id="gesion_dms_project_address" name="Project Address" parent="project_settings" groups="project.group_project_manager"
+                  action="project_address_view_list_action" sequence="40"/>
+    <!--项目交付地址-->
+    <menuitem id="gesion_dms_project_delivery_point" name="Project Delivery Point" parent="project_settings" groups="project.group_project_manager"
+                  action="project_delivery_point_view_list_action" sequence="50"/>
+    <!--项目工艺区域-->
+    <menuitem id="gesion_dms_project_process_area" name="Project Process Area" parent="project_settings" groups="project.group_project_manager"
+                  action="project_process_area_view_list_action" sequence="60"/>
+    <!--项目工作包-->
+    <menuitem id="gesion_dms_project_workpackage" name="Project Work Package" parent="project_settings" groups="project.group_project_manager"
+          action="project_workpackage_view_list_action" sequence="70"/>
+    <!--task_stage-->
+    <menuitem id="gesion_dms_task_stage" name="Task Stage" parent="project_settings" groups="project.group_project_manager"
+          action="task_stage_view_list_action" sequence="75"/>
+
+
+    <!--文档管理-->
+    <menuitem id="document_settings" name="Document Settings" parent="menu_document_project_management" sequence="30"/>
+    <!--项目文档分类-->
+    <menuitem id="gesion_dms_project_doc_class" name="Project Document Class" parent="document_settings" groups="project.group_project_manager"
+          action="project_doc_class_view_list_action" sequence="80"/>
+    <!--项目文档类型-->
+    <menuitem id="gesion_dms_project_doc_type" name="Project Document Type" parent="document_settings" groups="project.group_project_manager"
+          action="project_doc_type_view_list_action" sequence="90"/>
+    <!--项目文档评审阶段-->
+    <menuitem id="gesion_dms_project_doc_review_stage" name="Project Document Review Stage" parent="document_settings" groups="project.group_project_manager"
+          action="project_doc_review_stage_view_list_action" sequence="100"/>
+    <!--Milestone 里程碑-->
+    <menuitem id="Milestone" name="Milestone" parent="document_settings" groups="project.group_project_manager"
+          action="milestone_view_list_action" sequence="110"/>
+
+
+</odoo>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="gesion_dms.repository_kanban" model="ir.ui.view">
+	        <field name="name">gesion_dms.repository.kanban</field>
+	        <field name="model">gesion_dms.repository</field>
+	        <field name="arch" type="xml">
+                <kanban js_class="dms_directory_kanban">
+                    <field name="name" />
+			        <!--<field name="thumbnail" />-->
+                    <!--<field name="earned_value" widget="progressbar"/>-->
+			        <!--<field name="project_code" />-->
+                    <!--<field name="project_id" />-->
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card oe_kanban_global_click dms_repository_kanban">
+                                <div class="dms_kanban_left">
+                                    <!--<t t-if="record.image_small.raw_value">-->
+                                        <!--<img t-att-src="kanban_image('gesion_dms.repository', 'image_small', record.id.value)"/>-->
+                                    <!--</t>-->
+                                    <img t-att-src='_s + "/gesion_dms/static/src/img/repository.png"' class="o_kanban_image oe_kanban_avatar_smallbox"/>
+                                    <!--<field name="image" widget="image"/>-->
+                                </div>
+                                <div class="dms_kanban_right">
+                                    <div class="row">
+                                        <div class="col-xs-6 pull-left text-left" >
+                                            <!--<t>earned_value:   </t>-->
+                                            <!--<field name="earned_value" widget="progressbar"/>-->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--文件库名称-->
+                                            <span class="t">Repository Name:</span>
+                                            <span><field name="name"/></span>
+
+                                        </div>
+                                    </div>
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-xs-6 pull-right text-right">-->
+                                            <!--<img class="muk_thumbnail" t-attf-src="data:image/*;base64,{{record.thumbnail.value}}"/>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <div class="row">
+                                        <div>
+                                            <!--项目编号-->
+                                            <span class="t">Project Code:</span>
+                                            <span><field name="project_code"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--项目名称-->
+                                            <span class="t">Project Name:</span>
+                                            <span><field name="project_id"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--文件数量-->
+                                            <span class="t">File Count:</span>
+                                            <span><field name="doc_count"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--赢得值-->
+                                            <span class="t">Earned Value:</span>
+                                            <span><field name="earned_value" widget="progressbar"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--设计经理-->
+                                            <span class="t">Design Manager:</span>
+                                            <span><field name="design_manager"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--项目经理-->
+                                            <span class="t">Project Manager:</span>
+                                            <span><field name="project_manager"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <!--工艺包-->
+                                            <span class="t">Craft Package:</span>
+                                            <span><field name="craft_package"/></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </t>
+                    </templates>
+                    <!--<templates>-->
+                        <!--<t t-name="kanban-box">-->
+                            <!--<div class="oe_kanban_global_click o_res_partner_kanban">-->
+                                <!--<div class="o_kanban_tags_section oe_kanban_partner_categories"/>-->
+                                <!--<div class="o_kanban_image">-->
+                                    <!--&lt;!&ndash;<t t-if="record.image_small.raw_value">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img t-att-src="kanban_image('res.partner', 'image_small', record.id.value)"/>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</t>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<t t-if="!record.image_small.raw_value">&ndash;&gt;-->
+                                        <!--<img t-att-src='_s + "/gesion_dms/static/src/img/repository.png"' class="o_kanban_image oe_kanban_avatar_smallbox"/>-->
+                                    <!--&lt;!&ndash;</t>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash;<div class="oe_kanban_details">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<strong class="oe_partner_heading"><field name="display_name"/></strong>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="record.parent_id.raw_value and !record.function.raw_value"><field name="parent_id"/></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="!record.parent_id.raw_value and record.function.raw_value"><field name="function"/></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="record.parent_id.raw_value and record.function.raw_value"><field name="function"/> at <field name="parent_id"/></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="record.city.raw_value and !record.country_id.raw_value"><field name="city"/></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="!record.city.raw_value and record.country_id.raw_value"><field name="country_id"/></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="record.city.raw_value and record.country_id.raw_value"><field name="city"/>, <field name="country_id"/></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<li t-if="record.email.raw_value" class="o_text_overflow"><field name="email"/></li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="oe_kanban_partner_links"/>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--</div>-->
+
+                        <!--</t>-->
+                    <!--</templates>-->
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gesion_dms.repository_list_view">
+            <field name="name">gesion_dms.repository.tree</field>
+            <field name="model">gesion_dms.repository</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="project_code"/>
+                    <field name="project_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="gesion_dms.repository_form_view">
+            <field name="name">gesion_dms.repository.form</field>
+            <field name="model">gesion_dms.repository</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                     <button class="oe_highlight"
+					name="calculation_relativity_weight"
+					type="object"
+					string="Calculation Relativity Value"/>
+					<button class="oe_highlight"
+					name="calculation_check_button"
+					type="object"
+					string="Calculation Earned Value"/>
+					</header>
+                    <sheet>
+                        <!--<field name="thumbnail"-->
+                               <!--widget="image"-->
+                               <!--class="oe_avatar oe_read_only"-->
+                               <!--options="{'size': [90, 90]}"/>-->
+                        <!--<field name="custom_thumbnail"-->
+                               <!--widget="image"-->
+                               <!--class="oe_avatar oe_edit_only"-->
+                               <!--options="{'size': [90, 90]}"/>-->
+                        <field name="image" widget='image' class="oe_avatar" options='{"preview_image":"image_medium"}'/>
+                        <div class="oe_title">
+                            <!--<label for="name" class="oe_edit_only" />-->
+                            <h2>
+                                <field name="name"/>
+                            </h2>
+                            <group>
+                                <field name="is_project"/>
+                                <field name="project_id"/>
+                                <field name="project_code"/>
+                                <field name="organization_id"/>
+                                <field name="seq"/>
+                            </group>
+                        </div>
+                        <group>
+                            <!--项目信息-->
+                            <group string="Project Information">
+                                <field name="design_manager"/>
+                                <field name="craft_package"/>
+                                <field name="project_manager"/>
+                                <!--<field name="address_id"/>-->
+                                <field name="proprietor"/>
+                            </group>
+                            <!--文件库信息统计-->
+                            <group string="Repository Information">
+                                <field name="doc_count"/>
+                                <field name="task_id"/>
+                                <!--贏得值-->
+                                <field name="earned_value" string="Earned Value（0-1）"/>
+                                <field name="repository_code"/>
+                                <field name="man_hours"/>
+                                <field name="labor_cost"/>
+                                <field name="labor_cost_unit"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Child Folders">
+                            <field name="has_child"/>
+                            <field name="folder_ids"/>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="repository_view_action">
+                <field name="name">gesion_dms.repository</field>
+                <field name="res_model">gesion_dms.repository</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+    <!--文件库管理-->
+    <menuitem name="Repository Management" id="menu_repository_management" parent="menu_document_management"
+              action="repository_view_action" sequence="2"/>
+
+    <!--二级菜单-->
+    <!--<menuitem name="仪表看板" id="menu_document_one" parent="menu_repository" action="repository_view_action"/>-->
+
+
+        <!--<menuitem name="文件库" id="menu_document_two" parent="menu_repository" action="repository_view_action"/>-->
+        <!--<menuitem name="我的文档" id="menu_document_two_one" parent="menu_document_two" action="repository_view_action"/>-->
+        <!--<menuitem name="文件库" id="menu_document_two_two" parent="menu_document_two" action="repository_view_action"/>-->
+        <!--<menuitem name="文档管理" id="menu_document_two_three" parent="menu_document_two" action="repository_view_action"/>-->
+
+
+    <!--<menuitem name="文件编码" id="menu_document_three" parent="menu_repository" action="repository_view_action"/>-->
+    <!--<menuitem name="配置" id="project.menu_project_config" parent="menu_repository" action="repository_view_action"/>-->
+    </data>
+</odoo>

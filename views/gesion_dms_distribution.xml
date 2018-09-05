@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="gesion_dms.distribution_tree_view">
+            <field name="name">gesion_dms.distribution.tree</field>
+            <field name="model">gesion_dms_test.doc_distribution</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"/>
+                    <field name="state"/>
+                    <field name="title" />
+                    <field name="remarks" />
+                    <field name="now_time"/>
+                    <field name="addperson"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gesion_dms.distribution_form_view">
+            <field name="name">gesion_dms.distribution.form</field>
+            <field name="model">gesion_dms_test.doc_distribution</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="提交分发单" name="%(approve_action)d"
+                                states="draft"
+                                context="{'pay_id':id}"
+                                type="action"
+                                class="oe_highlight"  />
+                        <button string="文控审批" name="%(approve_action)d"
+                                states="control"
+                                context="{'pay_id':id}"
+                                type="action"
+                                class="oe_highlight"  />
+                        <button string="总经理审批" name="%(approve_action)d"
+                                states="approving"
+                                context="{'pay_id':id}"
+                                type="action"
+                                class="oe_highlight"  />
+                        <button string="执行者审核(会签)" name="%(approve_action)d"
+                                states="review"
+                                context="{'pay_id':id}"
+                                type="action"
+                                class="oe_highlight"  />
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,control,approving,review,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <h1><strong><p>Doc_Distribution_<field name="id"/></p></strong></h1>
+                        </group>
+                        <group string="Organization">
+                            <field name="organization_id" />
+                            <field name="organization_no" readonly="1"/>
+                        </group>
+                        <group string="Sender Information">
+                            <field name="sender_id"/>
+                            <field name="now_time"/>
+                        </group>
+                        <group string="Approve">
+                            <field name="approve_id" invisible="1"/>
+                            <!--<field name="title" invisible="1"/>-->
+                            <!--<field name="remarks" invisible="1"/>-->
+                            <field name="title" readonly="1"/>
+                            <field name="remarks" readonly="1"/>
+                            <field name="control"/>
+                            <field name="manager"/>
+                            <field name="addperson"/>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Reciver List">
+                            <field name="receiver_list">
+                                <tree>
+                                    <field name="id"/>
+                                    <field name="reveiver_ids"/>
+                                    <field name="discipline_id"/>
+                                    <field name="positon_id"/>
+                                    <field name="remarks"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Download Document List">
+                            <field name="doc_list">
+                                <tree>
+                                <field name="name"/>
+                                <field name="id"/>
+                                <field name="document_number"/>
+                                <field name="document_title"/>
+                                <field name="discipline_id"/>
+                                <field name="content"/>
+                            </tree>
+                            </field>
+                        </page>
+                        <page string="Approve Info">
+                                <field name="review_id">
+                                    <tree>
+                                        <field name="status"/>
+                                        <field name="title"/>
+                                        <field name="remarks"/>
+                                        <field name="addperson"/>
+                                        <field name="adddate"/>
+                                    </tree>
+                                </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_status_filter" model="ir.ui.view">
+            <field name="name">筛选</field>
+            <field name="model">gesion_dms_test.doc_distribution</field>
+            <field name="arch" type="xml">
+                <search string="筛选">
+                    <!--<field name="name"/>-->
+
+                    <filter string="草稿" domain="[('state','=','draft')]" />
+                    <filter string="非草稿" domain="[('state','!=','draft')]" />
+                    <!--<group expand="0" string="">-->
+                        <!--<filter string="按name分组" domain="[]" context="{'group_by':'name'}"/>-->
+
+                    <!--</group>-->
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gesion_dms.distribution_kanban">
+            <field name="name">gesion_dms.distribution.kanban</field>
+            <field name="model">gesion_dms_test.doc_distribution</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <strong><span><field name="sender_id"/></span></strong>
+                                    </div>
+                                    <div class="col-xs-6 pull-right text-right">
+                                        <strong><field name="doc_list"/></strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 text-muted">
+                                        <span></span>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <span class="pull-right text-right">
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="distribution_view_action">
+                <field name="name">gesion_dms.distribution</field>
+                <field name="res_model">gesion_dms_test.doc_distribution</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <!--<menuitem name="Doc Distribution" id="menu_distribution_doc" parent="menu_document_management"-->
+              <!--action="distribution_view_action" sequence="5"/>-->
+    </data>
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<!--Gesion Document Groups-->
+	菜单/对象级别：
+
+	<!--Gesion Project Groups-->
+    <record  id="category_gesion_project_security" model="ir.module.category">
+		<field name="name">Gesion Project</field>
+	</record>
+
+    <record id="group_gesion_project_user" model="res.groups">
+		<field name="name">User</field>
+		<field name="category_id" ref="category_gesion_project_security" />
+	</record>
+
+	<record id="group_gesion_project_manager" model="res.groups">
+		<field name="name">Manager</field>
+        <field name="implied_ids" eval="[(4, ref('group_gesion_project_user'))]" />
+		<field name="category_id" ref="category_gesion_project_security" />
+	</record>
+
+	<record id="group_gesion_project_admin" model="res.groups">
+		<field name="name">Administrator</field>
+		<field name="implied_ids" eval="[(4, ref('group_gesion_project_manager'))]" />
+		<field name="category_id" ref="category_gesion_project_security" />
+		<field name="users" eval="[(4, ref('base.user_root'))]"/>
+	</record>
+
+    <!--Gesion ERMP Groups-->
+    <record  id="category_gesion_ermp_security" model="ir.module.category">
+		<field name="name">Gesion ERMP</field>
+	</record>
+
+	<record id="group_gesion_ermp_employee" model="res.groups">
+		<field name="name">Employee</field>
+		<field name="category_id" ref="category_gesion_ermp_security" />
+	</record>
+
+	<record id="group_gesion_ermp_hr" model="res.groups">
+		<field name="name">HR</field>
+		<field name="implied_ids" eval="[(4, ref('group_gesion_ermp_employee'))]" />
+		<field name="category_id" ref="category_gesion_ermp_security" />
+	</record>
+
+	<record id="group_gesion_ermp_hr_manager" model="res.groups">
+		<field name="name">HR Manager</field>
+		<field name="implied_ids" eval="[(4, ref('group_gesion_ermp_hr'))]" />
+		<field name="category_id" ref="category_gesion_ermp_security" />
+	</record>
+
+    <record id="group_gesion_ermp_admin" model="res.groups">
+		<field name="name">Admin</field>
+		<field name="implied_ids" eval="[(4, ref('group_gesion_ermp_hr_manager'))]" />
+		<field name="category_id" ref="category_gesion_ermp_security" />
+		<field name="users" eval="[(4, ref('base.user_root'))]"/>
+	</record>
+
+</odoo>
+

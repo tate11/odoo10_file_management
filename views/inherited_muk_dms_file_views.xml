@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--<record id="muk_dms_file_form_inherit" model="ir.ui.view">-->
+        <!--<field name="name">muk_dms.file.form</field>-->
+        <!--<field name="model">muk_dms.file</field>-->
+        <!--<field name="inherit_id"-->
+               <!--ref="muk_dms.view_dms_file_form"/>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<xpath expr="//form/header"-->
+                   <!--position="inside">-->
+                <!--&lt;!&ndash;<span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button name="action_first_approve"&ndash;&gt;-->
+                            <!--&lt;!&ndash;string="Approve"&ndash;&gt;-->
+                            <!--&lt;!&ndash;states="draft"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;attrs="{'invisible':[('state', '!=', 'draft')]}"/>&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button name="action_second_approve"&ndash;&gt;-->
+                            <!--&lt;!&ndash;string="Approve"&ndash;&gt;-->
+                            <!--&lt;!&ndash;states="first"&ndash;&gt;-->
+                            <!--&lt;!&ndash;attrs="{'invisible':[('state', '!=', 'first')]}"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button name="action_third_approve"&ndash;&gt;-->
+                            <!--&lt;!&ndash;string="Approve"&ndash;&gt;-->
+                            <!--&lt;!&ndash;states="second"&ndash;&gt;-->
+                            <!--&lt;!&ndash;attrs="{'invisible':[('state', '!=', 'second')]}"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button name="action_done"&ndash;&gt;-->
+                            <!--&lt;!&ndash;string="Done"&ndash;&gt;-->
+                            <!--&lt;!&ndash;states="third"&ndash;&gt;-->
+                            <!--&lt;!&ndash;attrs="{'invisible':[('state', '!=', 'third')]}"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button name="action_cancel"&ndash;&gt;-->
+                            <!--&lt;!&ndash;string="Cancel"&ndash;&gt;-->
+                            <!--&lt;!&ndash;attrs="{'invisible':[('state', '=', 'done')]}"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                <!--<button class="oe_highlight"-->
+					<!--name="action_first_approve"-->
+					<!--type="object"-->
+					<!--string="Approve"-->
+					<!--attrs="{'invisible':[('state', '!=', 'draft')]}"/>-->
+                <!--<button class="oe_highlight"-->
+                    <!--name="action_second_approve"-->
+                    <!--type="object"-->
+                    <!--string="Approve"-->
+                    <!--states="first"-->
+                    <!--attrs="{'invisible':[('state', '!=', 'first')]}"/>-->
+                <!--<button class="oe_highlight"-->
+                    <!--name="action_third_approve"-->
+                    <!--type="object"-->
+                    <!--string="Approve"-->
+                    <!--states="second"-->
+                    <!--attrs="{'invisible':[('state', '!=', 'second')]}"/>-->
+                <!--<button class="oe_highlight"-->
+                    <!--name="action_done"-->
+                    <!--type="object"-->
+                    <!--string="Done"-->
+                    <!--states="third"-->
+                    <!--attrs="{'invisible':[('state', '!=', 'third')]}"/>-->
+                <!--<button name="action_cancel"-->
+                    <!--type="object"-->
+                    <!--string="Cancel"-->
+                    <!--attrs="{'invisible':[('state', '=', 'done')]}"/>-->
+                <!--<field name="state"-->
+                   <!--widget="statusbar"-->
+                   <!--statusbar_visible="draft,first,second,third,done"/>-->
+            <!--</xpath>-->
+
+            <!--<xpath expr="//form/sheet//field[@name='directory']"-->
+                   <!--position="after">-->
+                <!--<field name="hierarchy"/>-->
+            <!--</xpath>-->
+
+            <!--<xpath expr="//sheet/group[last()]" position="inside">-->
+                <!--<group>-->
+                    <!--<field name="repository_id"/>-->
+                    <!--<field name="progress" class="oe_inline" string="progress(0-1)"/>-->
+                    <!--&lt;!&ndash;<div name="relativity_weight" class="o_row">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<label for="relativity_weight"/>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<field name="relativity_weight" class="oe_inline"/> %%&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--<field name="relativity_weight" string="relativity_weight(0-1)"/>-->
+                    <!--<field name="absolute_weight"/>-->
+                    <!--<field name="earned_value" string="Earned Value（0-1）"/>-->
+                <!--</group>-->
+                <!--<group>-->
+                    <!--<field name="task_id"/>-->
+                    <!--<field name="man_hours"/>-->
+                    <!--<field name="labor_cost"/>-->
+                    <!--<field name="labor_cost_unit"/>-->
+                    <!--<field name="description"/>-->
+                <!--</group>-->
+                <!--<group>-->
+                    <!--<field name="discipline_id"/>-->
+                    <!--<field name="doc_class_id"/>-->
+                    <!--<field name="doc_type_id"/>-->
+                    <!--<field name="review_stage_id"/>-->
+                <!--</group>-->
+                <!--<group>-->
+                    <!--<field name="plan_date"/>-->
+                    <!--<field name="forecast_date"/>-->
+                    <!--<field name="actual_date"/>-->
+                <!--</group>-->
+            <!--</xpath>-->
+
+            <!--&lt;!&ndash;<xpath expr="//sheet/notebook/page[last()]" position="after">&ndash;&gt;-->
+                <!--&lt;!&ndash;<page string="Old Versions" groups="">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<group>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<field name="trigger_file_version" invisible="1"/>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<field name="md5" />&ndash;&gt;-->
+                        <!--&lt;!&ndash;<field name="version_ids" options='{"no_open": True, "no_create": True}'&ndash;&gt;-->
+                               <!--&lt;!&ndash;domain="[('size', '=', file_id.size)]"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</group>&ndash;&gt;-->
+                <!--&lt;!&ndash;</page>&ndash;&gt;-->
+                <!--&lt;!&ndash;<page string="Responsible Person" groups="">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<group>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<field name="responsible_person_ids" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;</group>&ndash;&gt;-->
+                <!--&lt;!&ndash;</page>&ndash;&gt;-->
+            <!--&lt;!&ndash;</xpath>&ndash;&gt;-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <record id="view_dms_file_form_inherited" model="ir.ui.view">
+        <field name="name">muk_dms_file.form.inherited</field>
+        <field name="model">muk_dms.file</field>
+        <field name="inherit_id" ref="muk_dms.view_dms_file_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]" position="replace">
+                <form string="Files">
+                    <header>
+                        <!--<button class="oe_highlight"-->
+                            <!--name="user_lock"-->
+                            <!--type="object"-->
+                            <!--string="Lock (Edit)"-->
+                            <!--attrs="{'invisible':['|',('locked', '!=', False), ('perm_write', '=', False)]}" />-->
+                        <!--<button class="oe_highlight"-->
+                            <!--name="user_unlock"-->
+                            <!--type="object"-->
+                            <!--string="Unlock (Release)"-->
+                            <!--attrs="{'invisible':['|',('locked', '=', False), ('editor', '=', False)]}" />-->
+                        <button class="oe_highlight"
+                            name="action_first_approve"
+                            type="object"
+                            string="Approve"
+                            attrs="{'invisible':[('state', '!=', 'draft')]}"/>
+                        <button class="oe_highlight"
+                            name="action_second_approve"
+                            type="object"
+                            string="Approve"
+                            states="first"
+                            attrs="{'invisible':[('state', '!=', 'first')]}"/>
+                        <button class="oe_highlight"
+                            name="action_third_approve"
+                            type="object"
+                            string="Approve"
+                            states="second"
+                            attrs="{'invisible':[('state', '!=', 'second')]}"/>
+                        <button class="oe_highlight"
+                            name="action_done"
+                            type="object"
+                            string="Done"
+                            states="third"
+                            attrs="{'invisible':[('state', '!=', 'third')]}"/>
+                        <button name="action_cancel"
+                            type="object"
+                            string="Cancel"
+                            attrs="{'invisible':[('state', '=', 'done')]}"/>
+                        <field name="state"
+                           widget="statusbar"
+                           statusbar_visible="draft,first,second,third,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                              <button name="%(project.task_view_action)d" string="Tasks" class="oe_stat_button" icon="fa-sliders" type="action"/>
+                              <button name="user_lock"
+                                      string="Locked"
+                                      class="oe_stat_button"
+                                      icon="fa-unlock-alt"
+                                      type="object"
+                                      attrs="{'invisible':['|',('locked', '!=', False), ('perm_write', '=', False)]}"/>
+                              <button name="user_unlock"
+                                      string="Unlock"
+                                      class="oe_stat_button"
+                                      icon="fa-lock"
+                                      type="object"
+                                      attrs="{'invisible':['|',('locked', '=', False), ('editor', '=', False)]}"/>
+                              <button name="%(distribution_view_action)d" string="Distribute" class="oe_stat_button" icon="fa-share-alt" type="action"/>
+                              <button name="action_alert" string="Activities" class="oe_stat_button" icon="fa-clock-o" type="action"/>
+                              <button name="%(link_to_view_action)d" string="Link to" class="oe_stat_button" icon="fa-link" type="action"/>
+                              <button name="action_alert" string="Barcode" class="oe_stat_button" icon="fa-qrcode" type="action"/>
+                              <button name="action_alert" string="Mark Stage" class="oe_stat_button" icon="fa-flag-checkered" type="action"/>
+                        </div>
+                        <field name="locked" invisible="1" />
+                        <field name="editor" invisible="1" />
+                        <field name="thumbnail"
+                            widget="image"
+                            class="oe_avatar oe_read_only"
+                            options="{'size': [90, 90]}"/>
+                        <field name="custom_thumbnail"
+                            widget="image"
+                            class="oe_avatar oe_edit_only"
+                            options="{'size': [90, 90]}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" />
+                            </h1>
+                            <group>
+                                <field name="document_number"/>
+                                <field name="document_title"/>
+                                <field name="seq" />
+                                <field name="code" attrs="{'invisible':[('name','!=',True)]}" readonly="True"/>
+                            </group>
+                        </div>
+                        <!--<group>-->
+                            <!---->
+                        <!--</group>-->
+                        <group>
+                            <group>
+                                <field name="content" filename="name" string="Electronic Doc"/>
+                                <field name="size" widget="dms_size" />
+                                <field name="relational_path" widget="dms_relpath" />
+                                <field name="repository_id"/>
+                                <field name="directory" string="Folder_Directory"/>
+                            </group>
+                            <group>
+                                <field name="extension" />
+                                <field name="mimetype" />
+                                <field name="settings" />
+                                <field name="hierarchy"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Document Information">
+                                <!--<field name="project_id" string="Project No."/>-->
+                                <!--<field name="area_code" string="Area Code" />-->
+                                <!--<field name="discipline_id" string="Discipline" />-->
+                                <!--<field name="doc_type_id" string="Doc Type" />-->
+                                <!--<field name="doc_class_id" string="Document Class" />-->
+                                <!--<field name="revision_no" string="Revision NO" />-->
+                                <!--<field name="system_revision_no" string="System Revision" />-->
+                                <!--<field name="responsible_person_ids" string="Designer" />-->
+                                <!--<field name="sheets" string="Sheets" />-->
+                                <!--<field name="doc_size" string="Doc Size" />-->
+                                <!--<field name="work_package_id" string="Work Package" />-->
+                                <!--<field name="doc_issue_package" string="Doc issue Package" />-->
+                                <field name="project_number"/>
+                                <field name="area_code"/>
+                                <field name="discipline_id"/>
+                                <field name="doc_type_id"/>
+                                <field name="doc_class_id"/>
+                                <field name="revision_number" />
+                                <field name="system_revision"/>
+                                <field name="designer_ids" widget="many2many_tags"/>
+                                <field name="sheets"/>
+                                <field name="Document_size"/>
+                                <field name="work_package"/>
+                                <field name="document_issue_package"/>
+                                <field name="document_description" string="Doc Description" placeholder="对该文档的内容简单的概述和描述"/>
+                            </group>
+                            <group String="Man Hours">
+                                <field name="start_date"/>
+                                <field name="plan_end_date"/>
+                                <field name="location_in_hpro_id"/>
+                                <field name="original_budget"/>
+                                <field name="current_budget"/>
+                                <field name="approved_internal_budget"/>
+                                <field name="forecast_to_go"/>
+                                <group class="oe_subtotal_footer oe_left">
+                                    <field name="man_hours" readonly="1"/>
+                                    <field name="labor_cost_unit" widget="monetary"/>
+                                    <field name="labor_cost" class="oe_subtotal_footer_separator"/>
+                                </group>
+                            </group>
+                            <group string="Document Progress(Percentage)">
+                                    <field name="input_progress" class="oe_inline" placeholder="Input"/>
+                                    <field name="applied" class="oe_inline" placeholder="Applied"/>
+                                    <field name="relativity_weight" string="Relativity Weight（0-1）"/>
+                                    <field name="absolute_weight"/>
+                                    <field name="earned_value" string="Earned Value（0-1）"/>
+                                    <field name="tag_ids" widget="many2many_tags"/>
+                                    <field name="task_id"/>
+                            </group>
+                            <group String="Miscellaneous">
+                                <field name="master"/>
+                                <field name="cert_auth"/>
+                                <field name="sub_ordinate"/>
+                                <field name="canclled"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Access Information">
+                                <group>
+                                    <group>
+                                        <field name="perm_read" readonly="1" />
+                                    </group>
+                                    <group>
+                                        <field name="perm_create" readonly="1" />
+                                        <field name="perm_write" readonly="1" />
+                                        <field name="perm_unlink" readonly="1" />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Meta Information" groups="base.group_no_one">
+                                <group>
+                                    <group>
+                                        <field name="id" />
+                                    </group>
+                                    <group>
+                                        <field name="locked_by" />
+                                    </group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="create_date" readonly="1" />
+                                        <field name="create_uid" readonly="1" />
+                                    </group>
+                                    <group>
+                                        <field name="write_date" readonly="1" />
+                                        <field name="write_uid" readonly="1" />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Technical Information" groups="base.group_no_one" invisible="1">
+                                <group>
+                                    <field name="reference" />
+                                </group>
+                                <group string="Indexed Content">
+                                    <field name="index_content" nolabel="1" invisible="1"/>
+                                </group>
+                            </page>
+                            <page string="Old Versions" groups="">
+                                <group>
+                                    <field name="trigger_file_version" invisible="1"/>
+                                    <field name="md5" />
+                                    <field name="version_ids" options='{"no_open": True, "no_create": True}'
+                                           domain="[('size', '=', file_id.size)]"/>
+                                </group>
+                            </page>
+                            <page string="Responsible Person" groups="">
+                                <group>
+                                    <field name="responsible_person_ids" />
+                                </group>
+                            </page>
+                        </notebook>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+                </form>
+            </xpath>
+        </field>
+    </record>
+    <!--tree视图-->
+    <record id="view_dms_file_tree_inherited" model="ir.ui.view">
+        <field name="name">muk_dms_file.tree.inherited</field>
+        <field name="model">muk_dms.file</field>
+        <field name="inherit_id" ref="muk_dms.view_dms_file_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='path']" position="after">
+                <field name="repository_id" />
+				<field name="input_progress" />
+				<field name="file_code" />
+            </xpath>
+        </field>
+    </record>
+    <!--看板-->
+    <record id="action_gesion_file" model="ir.actions.act_window">
+        <field name="name">Document Files</field>
+        <field name="res_model">muk_dms.file</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+    <!--文件管理-->
+    <menuitem name="Document Management" id="menu_gesion_file" parent="menu_document_management"
+              action="action_gesion_file" sequence="4"/>
+</odoo>

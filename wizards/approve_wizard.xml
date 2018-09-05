@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="approve_wizard_view">
+            <field name="name">线索</field>
+            <field name="model">gesion_dms.approve</field>
+            <field name="arch" type="xml">
+                <form string="CRM向导" >
+                    <group col="2" colspan="2">
+                        <field name="title"/>
+                    </group>
+                    <group col="2" colspan="2">
+                        <field name="remarks"/>
+                    </group>
+                    <footer>
+                        <button name="agree" string="提交" type="object" class="oe_highlight"/>
+                        or
+                        <button name="refuse" string="驳回" type="object" class="oe_highlight" />
+                        or
+                        <button string="取消" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="approve_action" model="ir.actions.act_window">
+            <field name="name">Approving</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gesion_dms.approve</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="approve_wizard_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <act_window id="action_view"
+            multi="True"
+            key2="client_action_multi" name="线索"
+            res_model="gesion_dms.approve" src_model="gesion_dms_test.doc_distribution"
+            view_mode="form" target="new" view_type="form"
+            context="{'mass_convert' : True}"  groups=""
+            view_id="approve_wizard_view"/>
+    </data>
+</odoo>
+

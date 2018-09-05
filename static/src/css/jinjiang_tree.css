@@ -1,0 +1,50 @@
+/*repair glyphicons url source*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('/web/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('/web/static/lib/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/web/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/web/static/lib/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/web/static/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/web/static/lib/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.jinjiang_tree_background {
+  background-color: white;
+}
+
+.table{
+    width: 100%;
+}
+
+.jinjiang_table>tbody>tr>td, .jinjiang_table>tbody>tr>th, .jinjiang_table>tfoot>tr>td, .jinjiang_table>tfoot>tr>th, .jinjiang_table>thead>tr>td, .jinjiang_table>thead>tr>th, .th-inner {
+    padding: 0px !important;
+    height: 24px;
+    line-height: 24px;
+}
+/*
+.jinjiang_table{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.75em;
+}
+*/
+.jinjiang_table_place_holder{
+    padding: 0;
+    height: 26px;
+    width: 100%;
+    line-height: 24px;
+/*    font-size: 1.1em;*/
+}
+
+.disable_scroll_bar{
+    overflow:visible !important;
+}
+
+.show_kanban_name{
+    text-overflow: clip !important;
+}
+.clear{clear:both;}
+
+.splitter_panel .vsplitter {
+    z-index:0 !important;
+}

@@ -1,0 +1,2613 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* gesion_dms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20180411\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-29 08:57+0000\n"
+"PO-Revision-Date: 2018-08-29 08:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Craft Package:</span>"
+msgstr "<span class=\"t\">工艺包:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Design Manager:</span>"
+msgstr "<span class=\"t\">设计中心:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Earned Value:</span>"
+msgstr "<span class=\"t\">挣值:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">File Count:</span>"
+msgstr "<span class=\"t\">文件数:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Project Code:</span>"
+msgstr "<span class=\"t\">项目代码:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Project Manager:</span>"
+msgstr "<span class=\"t\">项目经理:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Project Name:</span>"
+msgstr "<span class=\"t\">项目名称:</span>"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_kanban
+msgid "<span class=\"t\">Repository Name:</span>"
+msgstr "<span class=\"t\">储存库名称:</span>"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_absolute_weight
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_absolute_weight
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_absolute_weight
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_absolute_weight
+msgid "Absolute Weight"
+msgstr "绝对权重"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_perm_access
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_perm_access
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_perm_access
+msgid "Access"
+msgstr "访问"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_access_control
+msgid "Access Control"
+msgstr "权限控制"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Access Information"
+msgstr "访问信息"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Activities"
+msgstr "活动"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_actual_date
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_actual_date
+msgid "Actual Date"
+msgstr "实际日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_actual_end_date
+msgid "Actual End Date"
+msgstr "实际结束日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_actual_start_date
+msgid "Actual Start Date"
+msgstr "实际开始日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_address_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_address_id
+msgid "Address"
+msgstr "地址"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_ermp_admin
+msgid "Admin"
+msgstr "管理"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_dms_admin
+#: model:res.groups,name:gesion_dms.group_gesion_project_admin
+msgid "Administrator"
+msgstr "管理员"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:148
+#, python-format
+msgid "An error occurred during download!"
+msgstr "下载过程中出错!"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_applied
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Applied"
+msgstr "应用进度"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Approve"
+msgstr "批准"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+msgid "Approve Info"
+msgstr "批准信息"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_approve_id
+msgid "Approve id"
+msgstr "批准号码"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_approved_internal_budget
+msgid "Approved Internal Budget"
+msgstr "批准的内部预算"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.approve_action
+msgid "Approving"
+msgstr "批准"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_area_code
+msgid "Area Code"
+msgstr "区号"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Barcode"
+msgstr "条形码"
+
+#. module: gesion_dms
+#: selection:project.doc.type,special_doc_type:0
+msgid "Bid Approval"
+msgstr "投标批准"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_organization_register_no
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_organization_register_no
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_organization_register_no
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_organization_register_no
+msgid "Business License Registration Number"
+msgstr "营业执照注册号"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.approve_wizard_view
+msgid "CRM向导"
+msgstr "CRM向导"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_form_view
+msgid "Calculation Earned Value"
+msgstr "计算挣值"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_form_view
+msgid "Calculation Relativity Value"
+msgstr "计算相对论价值"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Cancel"
+msgstr "取消"
+
+#. module: gesion_dms
+#: selection:muk_dms.file,state:0
+msgid "Cancelled"
+msgstr "取消"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_canclled
+msgid "Canclled"
+msgstr "取消标识"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_cert_auth
+msgid "Cert Auth"
+msgstr "资质认证标识"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_form_view
+msgid "Child Folders"
+msgstr "子文件夹"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_child_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_child_ids
+msgid "Child Organizations"
+msgstr "子目录"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_view_employee_list_my
+msgid "Click to add a new employee."
+msgstr "单击添加一个新的员工"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_company
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_department
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_organization
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_project
+msgid "Click to create a department."
+msgstr "单击创建一个部门"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_color
+msgid "Color Index"
+msgstr "颜色索引"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_res_company
+#: model:ir.ui.view,arch_db:gesion_dms.view_department_tree
+msgid "Companies"
+msgstr "公司"
+
+#. module: gesion_dms
+#: selection:gesion.organization,organization_type:0
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_company_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_company_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_company_id
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_kanban
+msgid "Company"
+msgstr "公司"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.open_module_tree_company
+#: model:ir.ui.menu,name:gesion_dms.menu_res_company
+msgid "Company List"
+msgstr "公司名单"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_complete_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_complete_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_complete_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_complete_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_complete_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_complete_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_complete_groups
+msgid "Complete Groups"
+msgstr "整组"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_name
+msgid "Construction Area Name"
+msgstr "建筑面积名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_content
+msgid "Content"
+msgstr "内容"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_contract_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_contract_id
+msgid "Contract"
+msgstr "合约"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_convert_a1
+msgid "Convert A1"
+msgstr "转换成 A1"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_craft_package
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_craft_package
+msgid "Craft Package"
+msgstr "工艺包"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:141
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:161
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:194
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_perm_create
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_perm_create
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_perm_create
+#, python-format
+msgid "Create"
+msgstr "创建"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_date
+msgid "Create Date"
+msgstr "创建日期"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/xml/gesion_repository_views.xml:26
+#, python-format
+msgid "Create Direcotry"
+msgstr "创建目录 "
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/xml/gesion_repository_views.xml:29
+#, python-format
+msgid "Create File"
+msgstr "创建文件"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/xml/gesion_organization_tree_view_template.xml:29
+#, python-format
+msgid "Create Organization"
+msgstr "创建组织"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.gesion_organization_view_list_action
+msgid "Create a Organization."
+msgstr "创建一个组织."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_address_view_list_action
+msgid "Create a Project Address."
+msgstr "创建一个项目地址."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_construction_area_view_list_action
+msgid "Create a Project Construction Area."
+msgstr "创建一个项目."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_delivery_point_view_list_action
+msgid "Create a Project Delivery Point."
+msgstr "创建一个项目交付点."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_discipline_view_list_action
+msgid "Create a Project Discipline."
+msgstr "创建一个项目规则."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_doc_class_view_list_action
+msgid "Create a Project Doc Class."
+msgstr "创建一个项目文档类."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_doc_review_stage_view_list_action
+msgid "Create a Project Doc Review Stage."
+msgstr "创建一个项目文档审阅阶段."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_doc_type_view_list_action
+msgid "Create a Project Doc Type."
+msgstr "创建一个项目文档类型."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_issuepackage_view_list_action
+msgid "Create a Project Issuepackage"
+msgstr "创建一个项目提资包"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_process_area_view_list_action
+msgid "Create a Project Process Area."
+msgstr "创建一个项目流程区域."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_stage_view_list_action
+msgid "Create a Project Stage."
+msgstr "创建一个项目阶段."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.project_workpackage_view_list_action
+msgid "Create a Project Workpackage."
+msgstr "创建一个项目工作包."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.milestone_view_list_action
+msgid "Create a milestone."
+msgstr "创建一个里程碑."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.task_stage_view_list_action
+msgid "Create a task stage."
+msgstr "创建一个任务阶段."
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_create_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_create_date
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_credit_rating
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_credit_rating
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_credit_rating
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_credit_rating
+msgid "Credit Rating"
+msgstr "信用评级"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_currency
+msgid "Currency"
+msgstr "币种"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_current_budget
+msgid "Current Budget"
+msgstr "当前预算"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_now_time
+msgid "Current Time"
+msgstr "当前时间"
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_project_doc_review_stage_design_doc_indicate
+#: model:ir.model.fields,help:gesion_dms.field_project_doc_type_design_doc_indicate
+msgid "D is design file, O is other file."
+msgstr "D是设计文件, O是其它文件."
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/gesion_file_version.py:40
+#: selection:gesion_dms.file_version,reference:0
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_form_view
+#, python-format
+msgid "Data"
+msgstr "数据"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_reference
+msgid "Data Reference"
+msgstr "参考数据"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_gesion_dms_data_database
+msgid "Database Data"
+msgstr "数据库数据"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:128
+#: code:addons/gesion_dms/static/src/xml/gesion_organization_tree_view_template.xml:26
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_perm_unlink
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_perm_unlink
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_perm_unlink
+#, python-format
+msgid "Delete"
+msgstr "删除"
+
+#. module: gesion_dms
+#: selection:gesion.organization,organization_type:0
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_department_id
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_department_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_department_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_department_id
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_kanban
+msgid "Department"
+msgstr "部门"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.open_module_tree_department
+#: model:ir.ui.menu,name:gesion_dms.menu_hr_department
+msgid "Department List"
+msgstr "部门名单"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_description
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_description
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_description
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_employee_description
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_description
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_description
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_description
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_description
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_description
+msgid "Description"
+msgstr "说明"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_repository
+msgid "Design Center"
+msgstr "设计中心"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_design_doc_indicate
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_design_doc_indicate
+msgid "Design Doc Indicate"
+msgstr "设计文档说明"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_design_manager
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_design_manager
+msgid "Design Manager"
+msgstr "设计经理"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_designer_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_designer
+#: model:res.groups,name:gesion_dms.group_gesion_dms_designer
+msgid "Designer"
+msgstr "设计人员"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_directory_tree_inherited
+msgid "Directories"
+msgstr "目录"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:167
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:200
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_directory_ids
+#, python-format
+msgid "Directory"
+msgstr "目录"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_directory_code
+msgid "Directory Code"
+msgstr "目录代码"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_discipline_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_discipline_id
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_discipline_id
+msgid "Discipline"
+msgstr "规则"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_name
+msgid "Discipline Name"
+msgstr "规则名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_display_name
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Distribute"
+msgstr "发布"
+
+#. module: gesion_dms
+#: selection:gesion_dms_test.doc_distribution,state:0
+msgid "Distribution Completed"
+msgstr "发布完成"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_distribution_id
+msgid "Distribution id"
+msgstr "发布 Id"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_distribution_ids
+msgid "Distribution ids"
+msgstr "发布 IDS"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_doc_class_id
+msgid "Doc Class"
+msgstr "文件类"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_name
+msgid "Doc Class Name"
+msgstr "文件类名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_document_description
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Doc Description"
+msgstr "文件说明"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_review_stage_id
+msgid "Doc Review Stage"
+msgstr "文件审查阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_name
+msgid "Doc Review Stage Name"
+msgstr "文件审查阶段名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_doc_amount
+msgid "Doc Sheets amount"
+msgstr "文件表数量"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_Document_size
+msgid "Doc Size"
+msgstr "文件大小"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_doc_type_id
+msgid "Doc Type"
+msgstr "文件类型"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_name
+msgid "Doc Type Name"
+msgstr "文件类型名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_doc_distribution_id
+msgid "Doc distribution id"
+msgstr "文件发布ID"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_document_issue_package
+msgid "Doc issue Package"
+msgstr "文件提交包"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_doc_list
+msgid "Doc list"
+msgstr "文件清单"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+msgid "Doc_Distribution_"
+msgstr "文件发布"
+
+#. module: gesion_dms
+#: selection:gesion_dms_test.doc_distribution,state:0
+msgid "Document Control Approval"
+msgstr "文件权限审批"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_control
+msgid "Document Control Read"
+msgstr "文件权限可读"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_document_control_users
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_document_control_users
+msgid "Document Control Staff"
+msgstr "文件管理人员"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_doc_count
+msgid "Document Count"
+msgstr "文件数量"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.action_gesion_directory
+msgid "Document Directories"
+msgstr "文件目录"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.action_gesion_file
+msgid "Document Files"
+msgstr "文件档案"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Document Information"
+msgstr "文件信息"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_gesion_dms_lock
+msgid "Document Locks"
+msgstr "文件锁"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_document_management
+#: model:ir.ui.menu,name:gesion_dms.menu_gesion_file
+msgid "Document Management"
+msgstr "文件管理"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_document_number
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_doc_number
+msgid "Document Number"
+msgstr "文件号码"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Document Progress(Percentage)"
+msgstr "文件进度（百分比）"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.document_settings
+msgid "Document Settings"
+msgstr "文件设置"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_document_title
+msgid "Document Title"
+msgstr "文件标题"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_dms_tree_view
+msgid "Document Tree View"
+msgstr "文件树视图"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+#: selection:muk_dms.file,state:0
+msgid "Done"
+msgstr "完成"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:132
+#, python-format
+msgid "Download"
+msgstr "下载"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+msgid "Download Document List"
+msgstr "下载文件目录"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:148
+#, python-format
+msgid "Download..."
+msgstr "下载..."
+
+#. module: gesion_dms
+#: selection:gesion_dms_test.doc_distribution,state:0
+#: selection:muk_dms.file,state:0
+msgid "Draft"
+msgstr "草案"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_earned_value
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_earned_value
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_earned_value
+msgid "Earned Value"
+msgstr "挣值"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Earned Value（0-1）"
+msgstr "挣值（0-1）"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:114
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:118
+#: code:addons/gesion_dms/static/src/xml/gesion_organization_tree_view_template.xml:23
+#: code:addons/gesion_dms/static/src/xml/gesion_repository_views.xml:23
+#, python-format
+msgid "Edit"
+msgstr "编辑"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_editor
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_editor
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_editor
+msgid "Editor"
+msgstr "编辑器"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Electronic Doc"
+msgstr "编辑文件"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_hr_employee
+#: model:res.groups,name:gesion_dms.group_gesion_ermp_employee
+msgid "Employee"
+msgstr "员工"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_hr_employee
+msgid "Employee Management"
+msgstr "人员管理"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.open_view_employee_list_my
+msgid "Employees"
+msgstr "员工"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_date_end
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_date_end
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_date_end
+msgid "Ending Date"
+msgstr "结束日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_user_ids
+#: model:ir.ui.view,arch_db:gesion_dms.project_discipline_view_form
+msgid "Engineers"
+msgstr "设计师"
+
+#. module: gesion_dms
+#: selection:project.doc.type,special_doc_type:0
+msgid "Enquiry"
+msgstr "查询"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/controllers/controllers.py:349
+#, python-format
+msgid "Error node type!"
+msgstr "错误的节点类型!"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/controllers/controllers.py:479
+#: code:addons/gesion_dms/controllers/controllers.py:481
+#: code:addons/gesion_dms/controllers/controllers.py:553
+#, python-format
+msgid "Error project id type!"
+msgstr "错误的项目名称类型!"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/controllers/controllers.py:114
+#: code:addons/gesion_dms/controllers/controllers.py:299
+#, python-format
+msgid "Error tree root!"
+msgstr "错误树根!"
+
+#. module: gesion_dms
+#: selection:gesion_dms_test.doc_distribution,state:0
+msgid "Executive Review"
+msgstr "行政复审"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_addperson
+msgid "Executive Reviewer"
+msgstr "行政复审人"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_extension
+msgid "Extension"
+msgstr "扩展"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/inherited_dms_file.py:182
+#, python-format
+msgid "Feature is under development, please be patience."
+msgstr "功能正在开发中，请耐心等待."
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:179
+#: model:ir.model,name:gesion_dms.model_muk_dms_file
+#, python-format
+msgid "File"
+msgstr "文件"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_file_code
+msgid "File Code"
+msgstr "文件代码"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_file_id
+msgid "File Name"
+msgstr "文件名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_name
+msgid "File Version"
+msgstr "文件版本"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.action_gesion_file_version_tree_view
+#: model:ir.ui.menu,name:gesion_dms.menu_gesion_file_versions
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_tree_view
+msgid "File Versions"
+msgstr "文件版本"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_name
+msgid "File library name"
+msgstr "文件库名称"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/inherited_dms_file.py:194
+#, python-format
+msgid "File size cannot be empty."
+msgstr "文件大小不能为空."
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_file_ids
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_tree_inherit
+msgid "Files"
+msgstr "文件夹"
+
+#. module: gesion_dms
+#: selection:muk_dms.file,state:0
+msgid "First Approved"
+msgstr "首次审批"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_fist_task_date_start
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_fist_task_date_start
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_fist_task_date_start
+msgid "Fist task date start"
+msgstr "第一个任务日期开始"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_fold
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_fold
+msgid "Folded in Kanban"
+msgstr "在看板中折叠"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_directory_tree_inherited
+msgid "Folder Code"
+msgstr "文件代码"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_gesion_directory
+msgid "Folder Management"
+msgstr "文件夹管理"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Folder_Directory"
+msgstr "文件目录"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_folder_ids
+msgid "Folders"
+msgstr "文件夹"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_forcast_date
+msgid "Forcast Date"
+msgstr "预期日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_forcast_end_date
+msgid "Forcast End Date"
+msgstr "预期结束日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_forcast_start_date
+msgid "Forcast Start Date"
+msgstr "预期开始日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_forecast_date
+msgid "Forecast Date"
+msgstr "预期日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_forecast_to_go
+msgid "Forecast To Go"
+msgstr "预期开始"
+
+#. module: gesion_dms
+#: selection:gesion_dms_test.doc_distribution,state:0
+msgid "General Manager Approval"
+msgstr "总经理审批"
+
+#. module: gesion_dms
+#: model:ir.module.category,name:gesion_dms.category_gesion_dms_security
+msgid "Gesion Documents"
+msgstr "正晖文件"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_dms_distribution
+#: model:ir.model,name:gesion_dms.model_gesion_dms_test_doc_distribution
+msgid "Gesion Documents Distribution"
+msgstr "正晖文件分发"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_dms_repository
+msgid "Gesion Documents Repository"
+msgstr "正晖文件库"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_dms_transimittal
+msgid "Gesion Documents Transimittal"
+msgstr "正晖文件传递"
+
+#. module: gesion_dms
+#: model:ir.module.category,name:gesion_dms.category_gesion_ermp_security
+msgid "Gesion ERMP"
+msgstr "正晖 ERMP"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_dms_file_version
+msgid "Gesion File Version"
+msgstr "正晖文件版本"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_organization
+msgid "Gesion Organization"
+msgstr "正晖组织"
+
+#. module: gesion_dms
+#: model:ir.module.category,name:gesion_dms.category_gesion_project_security
+msgid "Gesion Project"
+msgstr "正晖项目"
+
+#. module: gesion_dms
+#: model:ir.actions.client,name:gesion_dms.gesion_organization_tree_view_action
+msgid "Gesion_Organization_Tree_View"
+msgstr "正晖组织树状图"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_search
+msgid "Group By..."
+msgstr "分组..."
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_groups
+msgid "Groups"
+msgstr "群组"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_ermp_hr
+msgid "HR"
+msgstr "HR"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_ermp_hr_manager
+msgid "HR Manager"
+msgstr "HR经理"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_has_child
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_has_child
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_has_child
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_has_child
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_has_child
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_has_child
+msgid "Has Child"
+msgstr "下级单位"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_hierarchy
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_hierarchy
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_hierarchy
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_hierarchy
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_hierarchy
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_hierarchy
+msgid "Hierarchy"
+msgstr "层级"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_hr_department
+msgid "Hr Department"
+msgstr "部门"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_id
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_id
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_id
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_id
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_id
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_id
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_id
+msgid "ID"
+msgstr "ID"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Unlock"
+msgstr "解锁"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Indexed Content"
+msgstr "已索引的内容"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_Industry_Class_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_Industry_Class_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_Industry_Class_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_Industry_Class_ids
+msgid "Industry & Trade"
+msgstr "工业与贸易"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_view_form
+msgid "Information"
+msgstr "信息"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_inherit_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_inherit_groups
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_inherit_groups
+msgid "Inherit Groups"
+msgstr "继承组"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_input_progress
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Input"
+msgstr "输入进度"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_input_progress
+msgid "Input Progresss"
+msgstr "输入进度"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_is_last
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_is_last
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_is_last
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_is_last
+msgid "Is Last"
+msgstr "是否最下层"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_is_project
+msgid "Is Project"
+msgstr "是否项目"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_is_root
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_is_root
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_is_root
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_is_root
+msgid "Is Root"
+msgstr "是否根节点"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_issued
+msgid "Issued"
+msgstr "提交"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_name
+msgid "Issuepackage Name"
+msgstr "提交包名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_labor_cost
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_labor_cost
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_labor_cost
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_labor_cost
+msgid "Labor Cost"
+msgstr "人工费"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_labor_cost_unit
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_labor_cost_unit
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_labor_cost_unit
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_labor_cost_unit
+msgid "Labor Cost Unit"
+msgstr "人工成本单位"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info___last_update
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_write_uid
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_write_date
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_last_task_date_end
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_last_task_date_end
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_last_task_date_end
+msgid "Last task date end"
+msgstr "最后工作日期结束"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_early_days
+msgid "Lead Time(h)"
+msgstr "交货时间(h)"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_legal_person_id
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_legal_person_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_legal_person_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_legal_person_id
+msgid "Legal Person"
+msgstr "法人"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_dms_link_to_form_view
+msgid "Link Document"
+msgstr "链接文件"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_link_document_name
+msgid "Link Document Name"
+msgstr "法人名字"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_link_document_number
+msgid "Link Document Number"
+msgstr "链接文件编号"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_link_document_title
+msgid "Link Document Title"
+msgstr "链接文件标题"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_model_link_document
+msgid "Link document"
+msgstr "连接文件"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_link_id
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_link_id
+msgid "Link id"
+msgstr "链接名称"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Link to"
+msgstr "链接到"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_location_in_hpro_id
+msgid "Location In HPRO"
+msgstr "位于HPRO"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Lock (Edit)"
+msgstr "锁定 (编辑)"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_locked
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_locked
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_locked
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Locked"
+msgstr "锁定"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_view_form
+msgid "Lower organization"
+msgstr "较低的组织"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_md5
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_md5
+msgid "MD5"
+msgstr "MD5"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_man_hours
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_man_hours
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_man_hours
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_man_hours
+msgid "Man Hours"
+msgstr "工时"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_dms_manager
+#: model:res.groups,name:gesion_dms.group_gesion_project_manager
+msgid "Manager"
+msgstr "经理"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_manager
+msgid "Manager Approver"
+msgstr "经理审批人"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Mark Stage"
+msgstr "标记阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_master_id
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_master
+msgid "Master"
+msgstr "主文档标记"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_image_medium
+msgid "Medium-sized photo"
+msgstr "中等尺寸照片"
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_gesion_dms_repository_image_medium
+msgid "Medium-sized photo of the repository. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "中等照片的储存库。它会自动调整大小为128x128px的图像，并保持高宽比。在表单视图或某些看板视图中使用此字段."
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Meta Information"
+msgstr "元信息"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.milestone_view_list_action
+#: model:ir.model,name:gesion_dms.model_milestone
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_name
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_milestone
+#: model:ir.ui.menu,name:gesion_dms.Milestone
+msgid "Milestone"
+msgstr "里程碑"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:345
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:326
+#, python-format
+msgid "Model don't have this attribute."
+msgstr "模块没有这个属性."
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_muk_dms_directory
+msgid "MuK Documents Directory"
+msgstr "MUK文件目录"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_directory_tags_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_transimittal_name
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_name
+msgid "Name"
+msgstr "名字"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_company
+msgid "Odoo's company structure is used to manage all documents\n"
+"                related to employees by departments: expenses, timesheets,\n"
+"                leaves and holidays, recruitments, etc."
+msgstr "odoo的部门结构用来管理所有不同部门员工的文档：费用、工时表、休假、休假、招聘等等."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_department
+msgid "Odoo's department structure is used to manage all documents\n"
+"                related to employees by departments: expenses, timesheets,\n"
+"                leaves and holidays, recruitments, etc."
+msgstr "Odoo的部门结构用来管理所有不同部门员工的文档：费用，工时表，休假和假期，招聘等等"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_organization
+msgid "Odoo's organization structure is used to manage all documents\n"
+"                related to employees by departments: expenses, timesheets,\n"
+"                leaves and holidays, recruitments, etc."
+msgstr "Odoo的部门结构用来管理所有不同部门员工的文档：费用，工时表，休假和假期，招聘等等"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_module_tree_project
+msgid "Odoo's project structure is used to manage all documents\n"
+"                related to employees by departments: expenses, timesheets,\n"
+"                leaves and holidays, recruitments, etc."
+msgstr "Odoo的部门结构用来管理所有不同部门员工的文档：费用，工时表，休假和假期，招聘等等."
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_version_ids
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Old Versions"
+msgstr "旧版本"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:100
+#: code:addons/gesion_dms/static/src/js/gesion_views_documents.js:104
+#: code:addons/gesion_dms/static/src/xml/gesion_organization_tree_view_template.xml:20
+#: code:addons/gesion_dms/static/src/xml/gesion_repository_views.xml:20
+#, python-format
+msgid "Open"
+msgstr "开"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:147
+#: model:ir.actions.act_window,name:gesion_dms.gesion_organization_view_list_action
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_organization_id
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_organization_id
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_organization_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_organization_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_organization_id
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+#, python-format
+msgid "Organization"
+msgstr "组织"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.open_module_tree_organization
+#: model:ir.ui.menu,name:gesion_dms.menu_organization_management
+#: model:ir.ui.menu,name:gesion_dms.menu_res_organization
+msgid "Organization Management"
+msgstr "组织管理"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_organization_no
+msgid "Organization No"
+msgstr "组织号"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_organization_number
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_organization_number
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_organization_number
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_organization_number
+msgid "Organization Number"
+msgstr "组织编号"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_organization_tree_view
+msgid "Organization Tree View"
+msgstr "组织树状图"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_organization_type
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_organization_type
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_organization_type
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_organization_type
+msgid "Organization Type"
+msgstr "组织类型"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/js/gesion_organization_tree_view.js:193
+#, python-format
+msgid "OrganizationTreeView"
+msgstr "组织树状图"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_employee_organization_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_res_users_organization_ids
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_gesion_organizations
+#: model:ir.ui.view,arch_db:gesion_dms.view_employee_form_inherit_gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_users_form_inherit_gesion_dms
+msgid "Organizations"
+msgstr "组织"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_organization_id
+msgid "Orginzation Id"
+msgstr "组织名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_original_budget
+msgid "Original Budget"
+msgstr "原始预算"
+
+#. module: gesion_dms
+#: selection:project.doc.type,special_doc_type:0
+msgid "Other"
+msgstr "其它"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_output
+msgid "Output"
+msgstr "产量"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_file_id
+msgid "Parent File"
+msgstr "父文件"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_parent_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_parent_id
+msgid "Parent Organization"
+msgstr "父组织"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_parent_task
+msgid "Parent Task"
+msgstr "上级任务"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_res_partner
+msgid "Partner"
+msgstr "合作伙伴"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_path
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_path
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_path
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_path
+msgid "Path"
+msgstr "路径"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_review_info_pay_id
+msgid "Pay id"
+msgstr "付款账号"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_image
+msgid "Photo"
+msgstr "照片"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_plan_date
+msgid "Plan Date"
+msgstr "计划日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_plan_end_date
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_plan_end_date
+msgid "Plan End Date"
+msgstr "计划结束日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_plan_start_date
+msgid "Plan Start Date"
+msgstr "计划开始日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_planned_date
+msgid "Planned Date"
+msgstr "计划的日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_positon_id
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_positon_id
+msgid "Position"
+msgstr "位置"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_name
+msgid "Process Address Name"
+msgstr "进程地址名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_name
+msgid "Process Area Name"
+msgstr "处理区域名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_name
+msgid "Process Delivery Point Name"
+msgstr "流程交货地点名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_progress
+msgid "Progress"
+msgstr "进度"
+
+#. module: gesion_dms
+#: selection:gesion.organization,organization_type:0
+#: model:ir.model,name:gesion_dms.model_project_project
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_partner_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_res_users_project_id
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_project_id
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_kanban
+msgid "Project"
+msgstr "项目"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_document_project_management
+msgid "Project & Document Settings"
+msgstr "项目和文档设置"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_address_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_address
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_address
+#: model:ir.ui.view,arch_db:gesion_dms.project_address_view_form
+msgid "Project Address"
+msgstr "项目地址"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_project_address_code
+msgid "Project Address Code"
+msgstr "项目地址代码"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_project_code
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_num
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_project_code
+msgid "Project Code"
+msgstr "项目代码"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_construction_area_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_construction_area
+#: model:ir.ui.view,arch_db:gesion_dms.project_construction_area_view_form
+msgid "Project Construction Area"
+msgstr "项目建筑面积"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_project_cons_area_code
+msgid "Project Construction Area Code"
+msgstr "项目建筑面积代码"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_project_construction_area_id
+msgid "Project Construction area"
+msgstr "项目建筑面积"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_construction_area
+msgid "Project Constructions Area"
+msgstr "项目建筑面积"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_delivery_point_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_delivery_point
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_delivery_point
+#: model:ir.ui.view,arch_db:gesion_dms.project_delivery_point_view_form
+msgid "Project Delivery Point"
+msgstr "项目交付点"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_project_address_code
+msgid "Project Delivery Point Code"
+msgstr "项目交付点代码"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_discipline_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_discipline
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_discipline
+#: model:ir.ui.view,arch_db:gesion_dms.project_discipline_view_form
+msgid "Project Discipline"
+msgstr "项目专业"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_project_discipline_code
+msgid "Project Discipline Code"
+msgstr "项目专业代码"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_doc_class_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_doc_class
+#: model:ir.ui.view,arch_db:gesion_dms.project_doc_class_view_form
+msgid "Project Doc Class"
+msgstr "项目文件类"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_project_doc_class_code
+msgid "Project Doc Class Code"
+msgstr "项目文件类代码"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_doc_review_stage_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_doc_review_stage
+#: model:ir.ui.view,arch_db:gesion_dms.project_doc_review_stage_view_form
+msgid "Project Doc Review Stage"
+msgstr "项目文档评审阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_stage_indicate
+msgid "Project Doc Review Stage Code"
+msgstr "项目文档评审阶段代码"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_doc_type_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_doc_type
+#: model:ir.ui.view,arch_db:gesion_dms.project_doc_type_view_form
+msgid "Project Doc Type"
+msgstr "项目文档类型"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_project_doc_type_code
+msgid "Project Doc Type Code"
+msgstr "项目文档类型代码"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_doc_class
+msgid "Project Document Class"
+msgstr "项目文件类"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_doc_review_stage
+msgid "Project Document Review Stage"
+msgstr "项目文档评审阶段"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_doc_type
+msgid "Project Document Type"
+msgstr "项目文档类型"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_form_view
+msgid "Project Information"
+msgstr "项目信息"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_issuepackage_view_list_action
+#: model:ir.ui.view,arch_db:gesion_dms.project_issuepackage_view_form
+msgid "Project Issuepackage"
+msgstr "项目提交包"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.open_module_tree_project
+#: model:ir.ui.menu,name:gesion_dms.menu_res_project
+msgid "Project List"
+msgstr "项目清单"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_project_manager
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_project_manager
+msgid "Project Manager"
+msgstr "项目经理"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_project_id
+msgid "Project Name"
+msgstr "项目名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_project_number
+msgid "Project No."
+msgstr "项目号."
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_process_area_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_process_area
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_process_area
+#: model:ir.ui.view,arch_db:gesion_dms.project_process_area_view_form
+msgid "Project Process Area"
+msgstr "项目过程区域"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.project_settings
+msgid "Project Settings"
+msgstr "项目设置"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_project_stage
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_project_stage_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_project_stage_id
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_stage
+#: model:ir.ui.view,arch_db:gesion_dms.project_stage_view_form
+msgid "Project Stage"
+msgstr "项目的阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_project_stage_code
+msgid "Project Stage Code"
+msgstr "项目的阶段代码"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_stage_view_list_action
+msgid "Project Stages"
+msgstr "项目的阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_project_task_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_task_ids
+#: model:ir.ui.menu,name:gesion_dms.menu_project_task
+msgid "Project Task"
+msgstr "项目任务"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_project_task_class
+msgid "Project Task Class"
+msgstr "项目任务类"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_employee_project_task_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_project_task_ids
+#: model:ir.ui.view,arch_db:gesion_dms.view_employee_form_inherit_gesion_dms
+msgid "Project Tasks"
+msgstr "项目的任务"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_project_workpackage
+msgid "Project Work Package"
+msgstr "项目的工作包"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.project_workpackage_view_list_action
+#: model:ir.model,name:gesion_dms.model_project_workpackage
+#: model:ir.ui.view,arch_db:gesion_dms.project_workpackage_view_form
+msgid "Project Workpackage"
+msgstr "项目的工作包"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_project_issuepackage
+msgid "Project issuepackage"
+msgstr "项目的提交包"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/controllers/controllers.py:485
+#: code:addons/gesion_dms/controllers/controllers.py:557
+#, python-format
+msgid "Project not activated!"
+msgstr "项目未激活!"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_project_task_ids
+msgid "Project task"
+msgstr "项目的任务"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_proprietor
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_proprietor
+msgid "Proprietor"
+msgstr "业主"
+
+#. module: gesion_dms
+#: selection:project.doc.type,special_doc_type:0
+msgid "Purchase Order"
+msgstr "采购订单"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_grade
+msgid "QA/QC Grade"
+msgstr "QA/QC 年级"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_perm_read
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_perm_read
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_perm_read
+msgid "Read"
+msgstr "可读"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_dms_reader
+msgid "Reader"
+msgstr "可读的人"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_receiver_list
+msgid "Receiver list"
+msgstr "接收人名单"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_reveiver_ids
+msgid "Reciver"
+msgstr "接收人"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+msgid "Reciver List"
+msgstr "接收人名单"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_relativity_weight
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_relativity_weight
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_relativity_weight
+msgid "Relativity Weight"
+msgstr "相对权重"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Relativity Weight（0-1）"
+msgstr "相对权重（0-1）"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_remark
+msgid "Remark"
+msgstr "备注"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_remarks
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_remarks
+#: model:ir.model.fields,field_description:gesion_dms.field_reciver_list_remarks
+msgid "Remarks"
+msgstr "备注"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_repository_id
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_repository_id
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_repository_ids
+msgid "Repository"
+msgstr "知识库"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_repository_code
+msgid "Repository Code"
+msgstr "知识库代码"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.repository_form_view
+msgid "Repository Information"
+msgstr "存储库信息"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_repository_management
+msgid "Repository Management"
+msgstr "存储库的管理"
+
+#. module: gesion_dms
+#: model:ir.actions.client,name:gesion_dms.action_gesion_repository
+msgid "RepositoryTreeView"
+msgstr "存储库树视图"
+
+#. module: gesion_dms
+#: selection:project.doc.type,special_doc_type:0
+msgid "Requisition"
+msgstr "存储库"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_responsible_person_ids
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Responsible Person"
+msgstr "责任人"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_review_id
+msgid "Review id"
+msgstr "审核ID"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_revision_number
+msgid "Revision No"
+msgstr "审核号"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_is_root_task
+msgid "Root tasks"
+msgstr "根任务"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_seq
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_seq
+msgid "SEQ"
+msgstr "序号"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_std
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_std
+msgid "STD%"
+msgstr "完成百分比"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_svg_content
+msgid "SVG Content"
+msgstr "SVG 内容"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/inherited_dms_directory.py:85
+#, python-format
+msgid "Same level relativity_weight count must be between 0 and 1."
+msgstr "相同级别的相对权重计数必须在0和1之间."
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/xml/gesion_organization_tree_view_template.xml:12
+#: code:addons/gesion_dms/static/src/xml/gesion_repository_views.xml:12
+#, python-format
+msgid "Search..."
+msgstr "寻找.."
+
+#. module: gesion_dms
+#: selection:muk_dms.file,state:0
+msgid "Second Approved"
+msgstr "第二次审批"
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_muk_dms_file_state
+msgid "Select File State."
+msgstr "选择文件状态."
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_sender_id
+msgid "Sender"
+msgstr "发送者"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.distribution_form_view
+msgid "Sender Information"
+msgstr "发送者信息"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_milestone_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_address_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_construction_area_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_delivery_point_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_discipline_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_class_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_review_stage_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_process_area_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_sequence
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_sequence
+msgid "Sequence"
+msgstr "序号"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_settings
+#: model:ir.ui.menu,name:gesion_dms.menu_versions_management
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_view_form
+msgid "Settings"
+msgstr "设置"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_sheets
+msgid "Sheets"
+msgstr "表"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_size
+msgid "Size"
+msgstr "尺寸"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_image_small
+msgid "Small-sized photo"
+msgstr "小尺寸照片"
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_gesion_dms_repository_image_small
+msgid "Small-sized photo of the repository. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "存储库的小尺寸照片。 它会自动调整为64x64像素图像，并保留纵横比。 在需要小图像的任何地方使用此字段."
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_doc_type_special_doc_type
+msgid "Special Doc Indicate"
+msgstr "特别文件说明"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_task_stage_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_stage
+msgid "Stage"
+msgstr "阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_name
+msgid "Stage Name"
+msgstr "阶段名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_start_date
+msgid "Start Date"
+msgstr "开始日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_issuepackage_date_start
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_date_start
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_date_start
+msgid "Starting Date"
+msgstr "起始日期"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_state
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_state
+msgid "State"
+msgstr "状态"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_gesion_dms_settings
+msgid "Storage Settings"
+msgstr "存储设置"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_sub_ordinate
+msgid "Sub Ordinate"
+msgstr "子文档标记"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_link_to_doc_sub_ordinate_ids
+msgid "SubOrdinate"
+msgstr "子文档"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_child_tasks
+msgid "Subtasks"
+msgstr "子任务"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_system_revision
+msgid "System Revision"
+msgstr "系统修改"
+
+#. module: gesion_dms
+#: sql_constraint:directory.tags:0
+msgid "Tag name already exists !"
+msgstr "标签名称已存在!"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_tag_ids
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_tag_ids
+msgid "Tags"
+msgstr "标签"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_directory_tags
+msgid "Tags of directories"
+msgstr "目录的标签"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_project_task
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_task_id
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_task_id
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_task_id
+#: model:ir.model.fields,field_description:gesion_dms.field_task_stage_task_id
+msgid "Task"
+msgstr "任务"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_task_class_id
+msgid "Task Class"
+msgstr "任务类"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_task_level
+msgid "Task Level"
+msgstr "任务级别"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_task_number
+msgid "Task Number"
+msgstr "任务编号"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.task_stage_view_list_action
+#: model:ir.ui.menu,name:gesion_dms.gesion_dms_task_stage
+msgid "Task Stage"
+msgstr "任务阶段"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_task_stage_id
+msgid "Task stage id"
+msgstr "任务阶段ID"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_stage_task_ids
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Tasks"
+msgstr "任务"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_organization_tax_number
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_tax_number
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_tax_number
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_tax_number
+msgid "Tax Number"
+msgstr "税号"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_file_version_form_view
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Technical Information"
+msgstr "技术信息"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/gesion_base.py:55
+#, python-format
+msgid "There is a task end after this time, do you really want to set this time? If not, please reset the time."
+msgstr "在此之后有一个任务结束，你真的想设置这个时间吗？ 如果没有，请重置时间."
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/gesion_base.py:45
+#, python-format
+msgid "There is a task start before this time, do you really want to set this time? If not, please reset the time."
+msgstr "在此之前有一个任务开始，你真的想设置这个时间吗？ 如果没有，请重置时间."
+
+#. module: gesion_dms
+#: selection:muk_dms.file,state:0
+msgid "Third Approved"
+msgstr "第三次审批"
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_project_construction_area_fold
+#: model:ir.model.fields,help:gesion_dms.field_project_stage_fold
+msgid "This area is folded in the kanban view when there are no records in that area to display."
+msgstr "当该区域中没有要显示的记录时，该区域在看板视图中折叠."
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_project_discipline_fold
+msgid "This discipline is folded in the kanban view when there are no records in that discipline to display."
+msgstr "当该专业中没有要显示的记录时，该专业将被折叠在看板视图中."
+
+#. module: gesion_dms
+#: model:ir.model.fields,help:gesion_dms.field_gesion_dms_repository_image
+msgid "This field holds the image used as photo for the repository, limited to 1024x1024px."
+msgstr "此字段包含用作存储库照片的图像，限制为1024x1024px."
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/xml/gesion_organization_tree_view_template.xml:14
+#, python-format
+msgid "Tip: It is also possible to serach by using regular expressions like ^[a-zA-Z]*"
+msgstr "提示：也可以使用像^ [a-zA-Z]*这样的正则表达式进行搜索"
+
+#. module: gesion_dms
+#. openerp-web
+#: code:addons/gesion_dms/static/src/xml/gesion_repository_views.xml:14
+#, python-format
+msgid "Tip: It is also possible to serach by using regular expressions like ^[a-zA-Z]*.pdf"
+msgstr "提示：也可以使用^ [a-zA-Z] *。pdf等正则表达式进行搜索"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_approve_title
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_test_doc_distribution_title
+msgid "Title"
+msgstr "称谓"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_directory_doc_count
+msgid "Total Document Count"
+msgstr "文件总数"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_repository_earned_value
+msgid "Total Earned Value"
+msgstr "总挣值"
+
+#. module: gesion_dms
+#: selection:project.doc.type,special_doc_type:0
+msgid "Transimittal"
+msgstr "传送"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_trigger_file_version
+msgid "Trigger file version"
+msgstr "触发文件版本"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_gesion_dms_file_version_mimetype
+msgid "Type"
+msgstr "类型"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_dms_file_form_inherited
+msgid "Unlock (Release)"
+msgstr "解锁（释放）"
+
+#. module: gesion_dms
+#: model:res.groups,name:gesion_dms.group_gesion_project_user
+msgid "User"
+msgstr "用户"
+
+#. module: gesion_dms
+#: model:ir.ui.menu,name:gesion_dms.menu_action_res_users
+msgid "User Management"
+msgstr "用户管理"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,help:gesion_dms.open_view_employee_list_my
+msgid "With just a quick glance on the Odoo employee screen, you\n"
+"                can easily find all the information you need for each person;\n"
+"                contact data, job position, availability, etc."
+msgstr "随着Odoo员工的屏幕上只是一个快速浏览，你可以很容易地找到你所需要的每个人的信息;联系人数据，工作岗位，可用性等。"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_muk_dms_file_work_package
+msgid "Work Package"
+msgstr "工作包"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_workpackage_id
+msgid "Workpackage"
+msgstr "工作包"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_workpackage_name
+msgid "Workpackage Name"
+msgstr "工作包名称"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_hr_department_perm_write
+#: model:ir.model.fields,field_description:gesion_dms.field_project_project_perm_write
+#: model:ir.model.fields,field_description:gesion_dms.field_res_company_perm_write
+msgid "Write"
+msgstr "写"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/gesion_orgnization.py:120
+#, python-format
+msgid "You Can't Delete Record Which has Child."
+msgstr "您不能删除有子记录的记录."
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_view_form
+msgid "contract"
+msgstr "合同"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.view_department_form
+msgid "department"
+msgstr "部门"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_description
+msgid "description"
+msgstr "说明"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_document_list
+msgid "document.list"
+msgstr "文件清单"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_dms_approve
+msgid "gesion_dms.approve"
+msgstr "正晖_dms.审批"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.distribution_view_action
+msgid "gesion_dms.distribution"
+msgstr "正晖_dms.分发"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.link_to_view_action
+msgid "gesion_dms.link_to"
+msgstr "正晖_dms.位于"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_gesion_dms_recipient_tree_view_info
+msgid "gesion_dms.recipient_tree_view_info"
+msgstr "正晖_dms.收件人树视图信息"
+
+#. module: gesion_dms
+#: model:ir.actions.act_window,name:gesion_dms.repository_view_action
+msgid "gesion_dms.repository"
+msgstr "正晖_dms.知识库"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_link_to_doc
+
+msgid "link_to.doc"
+msgstr "链接到文件"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_link_to_model
+msgid "link_to.model"
+msgstr "链接到模块"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.milestone_view_form
+msgid "milestone"
+msgstr "里程碑"
+
+#. module: gesion_dms
+#: model:ir.model.fields,field_description:gesion_dms.field_project_task_class_name
+msgid "name"
+msgstr "名称"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.approve_wizard_view
+msgid "or"
+msgstr "或"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_view_form
+msgid "personnel"
+msgstr "人员"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.gesion_organization_search
+msgid "project"
+msgstr "项目"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_project_task_class
+msgid "project.task.class"
+msgstr "项目任务类"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_reciver_list
+msgid "reciver.list"
+msgstr "接收者名单"
+
+#. module: gesion_dms
+#: code:addons/gesion_dms/models/inherited_dms_directory.py:79
+#, python-format
+msgid "relativity_weight must be between 0 and 1."
+msgstr "相对论权重必须在0和1之间."
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_review_info
+msgid "review.info"
+msgstr "审批信息"
+
+#. module: gesion_dms
+#: model:ir.ui.view,arch_db:gesion_dms.task_stage_view_form
+msgid "task stage"
+msgstr "任务阶段"
+
+#. module: gesion_dms
+#: model:ir.model,name:gesion_dms.model_task_stage
+msgid "task.stage"
+msgstr "任务阶段"
+

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--<record id="project.view_task_tree2" model="ir.ui.view">-->
+            <!--<field name="name">project.task.tree</field>-->
+            <!--<field name="model">project.task</field>-->
+            <!--&lt;!&ndash;<field eval="2" name="priority"/>&ndash;&gt;-->
+            <!--<field name="arch" type="xml">-->
+                <!--&lt;!&ndash;<tree decoration-bf="message_needaction==True" decoration-danger="date_deadline and (date_deadline&lt;current_date)" string="Tasks">&ndash;&gt;-->
+                <!--<tree string="Tasks">-->
+
+                    <!--&lt;!&ndash;<field name="message_needaction" invisible="1"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="sequence" invisible="not context.get('seq_visible', False)"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="name"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="project_id" invisible="context.get('user_invisible', False)"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="user_id" invisible="context.get('user_invisible', False)"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="date_deadline" invisible="context.get('deadline_visible',True)"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="stage_id" invisible="context.get('set_visible',False)"/>&ndash;&gt;-->
+                    <!--<field name="user_id" invisible="1"/>-->
+                    <!--<field name="stage_id" invisible="1"/>-->
+                    <!--&lt;!&ndash;<field name="sequence"/>&ndash;&gt;-->
+                    <!--<field name="seq"/>-->
+                    <!--<field name="id"/>-->
+                    <!--<field name="task_number"/>-->
+                    <!--<field name="name"/>-->
+                    <!--<field name="doc_number"/>-->
+                    <!--<field name="doc_amount"/>-->
+                    <!--<field name="convert_a1"/>-->
+                    <!--<field name="user_id"/>-->
+                    <!--<field name="man_hours"/>-->
+                    <!--<field name="plan_start_date"/>-->
+                    <!--<field name="actual_end_date"/>-->
+                    <!--<field name="plan_end_date"/>-->
+                    <!--<field name="forcast_end_date"/>-->
+                    <!--<field name="early_days"/>-->
+                    <!--<field name="designer" invisible="1"/>-->
+                    <!--<field name="remark"/>-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="project.view_task_tree2_inherited" model="ir.ui.view">
+            <field name="name">project.task.tree.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <!--<field eval="2" name="priority"/>-->
+            <field name="arch" type="xml">
+                <xpath expr="//tree[1]" position="replace">
+                    <tree string="Tasks">
+                        <field name="user_id" invisible="1"/>
+                        <field name="stage_id" invisible="1"/>
+                        <!--<field name="sequence"/>-->
+                        <field name="seq" string="序号"/>
+                        <field name="id"/>
+                        <field name="task_number" string="任务编号" widget="icons"/>
+                        <field name="name" string="任务标题"/>
+                        <field name="doc_number" string="文档编号"/>
+                        <field name="doc_amount" string="文档数量"/>
+                        <field name="convert_a1" string="折合A1"/>
+                        <field name="user_id" string="分派给"/>
+                        <field name="planned_hours" string="最初计划时数"/>
+                        <!--<field name="man_hours" string=""/>-->
+                        <field name="early_days" string="提前天数"/>
+                        <field name="remaining_hours" widget="float_time" sum="Remaining Hours" readonly="1"/>
+                        <!--<field name="progress" widget="progressbar"/>-->
+                        <field name="input_progress" widget="percentbar" string="当前进度"/>
+                        <field name="plan_start_date" string="计划开始时间"/>
+                        <!--<field name="actual_end_date" string=""/>-->
+                        <field name="plan_end_date" string="计划结束时间"/>
+                        <field name="forcast_end_date" string="实际开始时间"/>
+                        <field name="designer" invisible="1"/>
+                        <field name="stat_rate" string="评级" widget="stars"/>
+                        <field name="seq_order" invisible="1"/>
+                        <field name="remark" string="备注"/>
+                        <field name="total_hours" invisible="1"/>
+                        <field name="effective_hours" widget="float_time" sum="Spent Hours" invisible="1"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="project.view_task_form2_inherited" model="ir.ui.view">
+            <field name="name">project.task.form.inherited</field>
+            <field name="model">project.task</field>
+            <!--<field eval="2" name="priority"/>-->
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[1]" position="replace">
+                    <form string="Task" class="o_form_project_tasks">
+                        <header>
+                            <field name="stage_id" widget="statusbar" clickable="True"
+                                options="{'fold_field': 'fold'}"/>
+                        </header>
+                        <sheet string="Task">
+                            <div class="oe_button_box" name="button_box">
+                                <button name="toggle_active" type="object" groups="base.group_user"
+                                        class="oe_stat_button" icon="fa-archive">
+                                    <field name="active" widget="boolean_button"
+                                        options='{"terminology": "archive"}'/>
+                                </button>
+                            </div>
+                            <field name="kanban_state" widget="kanban_state_selection"/>
+                            <div class="oe_title">
+                                <h1 class="o_row">
+                                    <field name="priority" widget="priority"/>
+                                    <field name="name" placeholder="Task Title..."/>
+                                </h1>
+                            </div>
+                            <group>
+                                <group string="Task Information">
+                                    <field name="task_level"/>
+                                    <field name="seq"/>
+                                    <field name="task_class_id"/>
+                                    <field name="parent_task"/>
+                                    <field name="task_number" />
+                                     <field name="tag_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                                    <field name="seq_order" invisible="1"/>
+                                </group>
+                                <group string="Man Hour">
+                                    <field name="user_id"
+                                        class="o_task_user_field"
+                                        options='{"no_open": True}'
+                                        widget="many2many_tags"/>
+                                    <field name="project_id" domain="[('active', '=', True)]" context="{'default_use_tasks':1}" invisible="1"/>
+                                    <field name="legend_blocked" invisible="1"/>
+                                    <field name="legend_normal" invisible="1"/>
+                                    <field name="legend_done" invisible="1"/>
+                                    <field name="man_hours"/>
+                                    <field name="date_deadline"/>
+                                    <!--<field name="progress"/>-->
+                                    <field name="labor_cost_unit"/>
+                                    <field name="currency"/>
+                                    <field name="labor_cost"/>
+                                    <field name="progress" widget="progressbar"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Document Information">
+                                        <field name="file_id"/>
+                                        <field name="doc_number"/>
+                                        <field name="discipline_id"/>
+                                        <field name="project_construction_area_id"/>
+                                        <field name="doc_amount"/>
+                                        <field name="convert_a1"/>
+
+                                        <!--<field name="is_root_task" invisible="1"/>-->
+                                        <!--<field name="remark"/>-->
+
+                                    </group>
+                                <group string="Task Progress">
+                                    <group>
+                                            <field name="plan_start_date"/>
+                                            <field name="forcast_start_date"/>
+                                            <field name="actual_start_date"/>
+                                            <field name="plan_end_date"/>
+                                            <field name="forcast_end_date"/>
+                                            <field name="actual_end_date"/>
+                                    </group>
+                                    <group>
+                                            <field name="input_progress"/>
+                                            <field name="relativity_weight"/>
+                                            <field name="absolute_weight"/>
+                                            <field name="earned_value"/>
+                                            <field name="early_days"/>
+                                    </group>
+                                </group>
+                            </group>
+                            <group string="Other &amp; More">
+                                <field name="grade"/>
+                                <field name="stat_rate" widget="stars"/>
+                            </group>
+                            <notebook>
+
+                                <page string="Stage &amp; Progress">
+                                    <field name="task_stage_ids">
+                                        <tree editable="bottom">
+                                            <field name="stage"/>
+                                            <field name="description"/>
+                                            <field name="std"/>
+                                            <field name="issued"/>
+                                            <field name="planned_date"/>
+                                            <field name="forcast_date"/>
+                                            <field name="actual_date"/>
+                                            <field name="milestone"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page name="description_page" string="Description">
+                                    <field name="description" type="html"/>
+                                    <div class="oe_clear"/>
+                                </page>
+                                <page name="extra_info" string="Extra Info">
+                                <group>
+                                    <group>
+                                        <!--<field name="sequence" groups="base.group_no_one"/>-->
+                                        <field name="partner_id"/>
+                                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                        <field name="displayed_image_id" groups="base.group_no_one"/>
+                                    </group>
+                                    <group>
+                                        <field name="date_assign" groups="base.group_no_one"/>
+                                        <field name="date_last_stage_update" groups="base.group_no_one"/>
+                                    </group>
+                                </group>
+                                </page>
+                                 <page string="Timesheets" attrs="{'invisible': [('project_id', '=', False)]}">
+                                    <field name="timesheet_ids" context="{'default_project_id': project_id}">
+                                        <tree editable="bottom" string="Timesheet Activities" default_order="date">
+                                            <field name="date"/>
+                                            <field name="user_id" required="1"/>
+                                            <field name="name"/>
+                                            <field name="unit_amount" string="Duration" widget="float_time"/>
+                                            <field name="project_id" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                    <group>
+                                     <group class="oe_subtotal_footer oe_right" name="project_hours">
+                                        <field name="effective_hours" widget="float_time" />
+                                        <field name="children_hours" widget="float_time" attrs="{'invisible' : [('children_hours', '=', 0.0)]}" />
+                                        <field name="total_hours_spent" widget="float_time" class="oe_subtotal_footer_separator" attrs="{'invisible' : [('children_hours', '=', 0.0)]}" />
+                                        <field name="remaining_hours" widget="float_time" class="oe_subtotal_footer_separator" readonly="1"/>
+                                     </group>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </form>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--<record id="project.view_task_form2_inherited" model="ir.ui.view">-->
+            <!--<field name="name">project.task.form</field>-->
+            <!--<field name="model">project.task</field>-->
+            <!--<field name="inherit_id" ref="project.view_task_form2"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--&lt;!&ndash;<xpath expr="field[@name='progress']" position="replace">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="progress" invisible="1" widget="progressbar"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</xpath>&ndash;&gt;-->
+                <!--<xpath expr="//field[@name='user_id']" position="replace">-->
+                    <!--<field name="user_id" widget="many2many_tags"/>-->
+                <!--</xpath>-->
+                <!--&lt;!&ndash;<xpath expr="//field[@name='date_deadline']" position="after">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<field name="progress" widget="progressbar"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</xpath>&ndash;&gt;-->
+            <!--</field>-->
+        <!--</record>-->
+        <!--task-->
+         <record model="ir.actions.act_window" id="project.task_view_action_inherited">
+                <field name="name">project.task_inherited</field>
+                <field name="res_model">project.task</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Project Task" id="menu_project_task"
+                  parent="project_settings" action="project.task_view_action_inherited"/>
+
+        <!--task_class-->
+        <record id="project.task_class_tree" model="ir.ui.view">
+            <field name="name">project.task.class.tree</field>
+            <field name="model">project.task.class</field>
+            <field name="arch" type="xml">
+                <tree string="Task Class">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="project.task_class_form" model="ir.ui.view">
+            <field name="name">project.task.class.form</field>
+            <field name="model">project.task.class</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <form string="Task Class" class="o_form_project_tasks">
+                    <sheet string="Task">
+                        <group>
+                            <group string="Task Class">
+                                <field name="name"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!--task-->
+         <record model="ir.actions.act_window" id="project.task_class_view_action">
+                <field name="name">project.task_class</field>
+                <field name="res_model">project.task.class</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Project Task Class" id="menu_project_task_class"
+                  parent="project_settings" action="project.task_class_view_action"/>
+    </data>
+</odoo>

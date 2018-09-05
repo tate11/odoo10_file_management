@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+          <record id="gesion_organization_search" model="ir.ui.view">
+            <field name="name">gesion.organization.search</field>
+            <field name="model">gesion.organization</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="department_id" domain="[('deparment_id','=',True)]"/>
+                    <field name="company_id" domain="[('company_id','=',True)]"/>
+                    <field name="project_id" domain="[('project_id','=',True)]"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="project_id"/>
+                        <filter name="company_id"/>
+                        <filter name="department_id"/>
+                        <filter name="project" string="project"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+    <record id="gesion_organization_kanban" model="ir.ui.view">
+	        <field name="name">gesion.organization.kanban</field>
+	        <field name="model">gesion.organization</field>
+	        <field name="arch" type="xml">
+                <kanban js_class="dms_directory_kanban">
+                    <field name="name" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-xs-6 pull-left text-left" >
+                                        <field name="name"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 pull-left text-left" >
+                                        <t>Project</t>
+                                        <field name="project_id"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 pull-left text-left" >
+                                        <t>Company</t>
+                                        <field name="company_id"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 pull-left text-left" >
+                                        <t>Department</t>
+                                        <field name="department_id"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+      <record model="ir.ui.view" id="gesion_organization_view_form">
+        <field name="name">gesion.organization.form</field>
+        <field name="model">gesion.organization</field>
+        <field name="field_parent">child_ids</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <!--<group>-->
+                        <div>
+                            <field name="organization_type" widget="radio" options="{'horizontal': true}"
+                                   attrs="{'required': [('hierarchy', '>', 0)]}"/>
+                            <group>
+                                <h2>
+                                    <field name="name" attrs="{'required': [('hierarchy', '>', 0)]}"/>
+                                </h2>
+                                <group>
+                                </group>
+                            </group>
+                        </div>
+                    <!--</group>-->
+                    <!--联络信息-->
+                    <group string="Information">
+                        <group>
+                            <field name="path"/>
+                            <field name="seq"/>
+                            <field name="organization_number"/>
+                            <field name="legal_person_id"/>
+                            <field name="Industry_Class_ids"/>
+                            <field name="tax_number"/>
+                            <field name="organization_register_no"/>
+                            <field name="credit_rating"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                            <field name="hierarchy"/>
+                        </group>
+                    </group>
+                    <!--组织关系-->
+                    <group string="Settings">
+                        <group>
+                            <field name="is_root"/>
+                            <field name="is_last"/>
+                        </group>
+                        <group>
+                            <field name="has_child"/>
+                            <field name="parent_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="company_id" readonly="1" attrs="{'invisible': [('organization_type','!=', 'company')]}"/>
+                        <field name="project_id" readonly="1" attrs="{'invisible': [('organization_type','!=', 'project')]}"/>
+                        <field name="department_id" readonly="1" attrs="{'invisible': [('organization_type','!=', 'department')]}"/>
+                    </group>
+                </sheet>
+                <sheet>
+                    <notebook>
+                            <page string="personnel">
+                            </page>
+                            <page string="Lower organization">
+                                <group>
+                                    <field name="child_ids"/>
+                                </group>
+                            </page>
+                            <page string="contract">
+                            </page>
+                    </notebook>
+                </sheet>
+                    <!--<div class="oe_chatter">-->
+                        <!--<field name="message_follower_ids" widget="mail_followers"/>-->
+                        <!--<field name="message_ids" widget="mail_thread"/>-->
+                    <!--</div>-->
+            </form>
+        </field>
+    </record>
+
+
+
+
+    <record model="ir.ui.view" id="gesion_organization_view_list">
+        <field name="name">gesion.organization.tree</field>
+        <field name="model">gesion.organization</field>
+        <field name="field_parent">child_ids</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="seq"/>
+                <field name="name"/>
+                <field name="organization_number"/>
+                <field name="legal_person_id"/>
+                <field name="Industry_Class_ids"/>
+                <field name="tax_number"/>
+                <field name="organization_register_no"/>
+                <field name="credit_rating"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="gesion_organization_view_list_action" model="ir.actions.act_window">
+        <field name="name">Organization</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gesion.organization</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref=""/>
+        <!--<field name="context">{"search_default_parent":1}</field>-->
+        <!--<field name="domain">[('parent_id', '=', False)]</field>-->
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Organization.
+            </p><p>
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="gesion_dms_gesion_organizations" name="Organizations" parent="muk_dms.cat_menu_muk_dms_documents"
+                  action="gesion_organization_view_list_action" sequence="1"/>
+
+    </data>
+</odoo>
